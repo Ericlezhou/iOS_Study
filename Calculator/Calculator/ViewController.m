@@ -8,11 +8,23 @@
 
 #import "ViewController.h"
 
+/*
+ extension的两大用途
+ 1.extension里面可以存放这个类实现的私有方法的声明
+ 2.定义多个extension，来拆分header，来定义私有成员变量
+ */
 @interface ViewController ()
 
 @property (nonatomic, strong) NSDecimalNumber *leftValue;
 @property (nonatomic, strong) NSDecimalNumber *rightValue;
 @property (nonatomic, assign) BOOL clearNum;
+
+@end
+
+//这里可以定义多个extension，来拆分header
+@interface ViewController ()
+
+
 
 @end
 
