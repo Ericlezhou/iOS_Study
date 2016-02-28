@@ -9,7 +9,7 @@
 #import "ViewController.h"
 
 typedef void(^BLKBlock)();
-@interface BLKViewController: ViewController
+@interface BLKViewController: UIViewController
 
 -(instancetype)initWithCallBackBlcok:(BLKBlock)blcok;
 

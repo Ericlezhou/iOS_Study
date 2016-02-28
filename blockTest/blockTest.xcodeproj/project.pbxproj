@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071C31541C831D44003B1E6A /* BLKView.m in Sources */ = {isa = PBXBuildFile; fileRef = 071C31531C831D44003B1E6A /* BLKView.m */; };
 		07A709FD1C81FD8C00993A58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A709FC1C81FD8C00993A58 /* main.m */; };
 		07A70A001C81FD8C00993A58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A709FF1C81FD8C00993A58 /* AppDelegate.m */; };
 		07A70A031C81FD8C00993A58 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A70A021C81FD8C00993A58 /* ViewController.m */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		071C31521C831D44003B1E6A /* BLKView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLKView.h; sourceTree = "<group>"; };
+		071C31531C831D44003B1E6A /* BLKView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLKView.m; sourceTree = "<group>"; };
 		07A709F81C81FD8C00993A58 /* blockTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blockTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A709FC1C81FD8C00993A58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		07A709FE1C81FD8C00993A58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +66,8 @@
 				07A70A021C81FD8C00993A58 /* ViewController.m */,
 				07A70A121C8292A600993A58 /* BLKViewController.h */,
 				07A70A131C8292A600993A58 /* BLKViewController.m */,
+				071C31521C831D44003B1E6A /* BLKView.h */,
+				071C31531C831D44003B1E6A /* BLKView.m */,
 				07A70A071C81FD8D00993A58 /* Assets.xcassets */,
 				07A70A0C1C81FD8D00993A58 /* Info.plist */,
 				07A709FB1C81FD8C00993A58 /* Supporting Files */,
@@ -151,6 +156,7 @@
 				07A70A001C81FD8C00993A58 /* AppDelegate.m in Sources */,
 				07A70A141C8292A600993A58 /* BLKViewController.m in Sources */,
 				07A709FD1C81FD8C00993A58 /* main.m in Sources */,
+				071C31541C831D44003B1E6A /* BLKView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +286,7 @@
 				07A70A111C81FD8D00993A58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
