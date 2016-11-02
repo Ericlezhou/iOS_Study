@@ -501,6 +501,7 @@
 				073011961C89684900EDB9A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		073011971C89684900EDB9A2 /* Build configuration list for PBXNativeTarget "InstrumentTestTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +510,7 @@
 				073011991C89684900EDB9A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0730119A1C89684900EDB9A2 /* Build configuration list for PBXNativeTarget "InstrumentTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +519,7 @@
 				0730119C1C89684900EDB9A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
