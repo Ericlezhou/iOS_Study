@@ -9,22 +9,51 @@
 #import "StoreKit/SKStoreReviewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)enterForgeGround
+{
+    NSLog(@"%@", [[UIApplication sharedApplication] alternateIconName]);
+}
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view, typically from a nib.
-    if ([[UIApplication sharedApplication] supportsAlternateIcons]) {
+    if ([[UIApplication sharedApplication] supportsAlternateIcons])
+    {
         NSLog(@"supportsAlternateIcons");
-    }else{
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(enterForgeGround) name:UIApplicationDidBecomeActiveNotification object:nil];
+        NSString *iconName = [[UIApplication sharedApplication] alternateIconName];
+        if (!iconName) {
+            [self.segment setSelectedSegmentIndex:0];
+        }else if ([iconName isEqualToString:@"blue"]){
+            [self.segment setSelectedSegmentIndex:1];
+        }else if ([iconName isEqualToString:@"green"]){
+            [self.segment setSelectedSegmentIndex:2];
+        }
+    }
+    else
+    {
         NSLog(@"not supportsAlternateIcons");
     }
 }
-- (IBAction)changeIcon:(UISegmentedControl *)sender {
-    switch (sender.selectedSegmentIndex) {
+
+
+- (IBAction)changeIcon:(UISegmentedControl *)sender
+{
+    switch (sender.selectedSegmentIndex)
+    {
         case 0:
             [[UIApplication sharedApplication] setAlternateIconName:nil completionHandler:^(NSError * _Nullable error) {
                 NSLog(@"error = %@", error.localizedDescription);
@@ -46,7 +75,8 @@
     }
 
 }
-- (IBAction)requetReview:(UIButton *)sender {
+- (IBAction)requetReview:(UIButton *)sender
+{
     [SKStoreReviewController requestReview];
 }
 
