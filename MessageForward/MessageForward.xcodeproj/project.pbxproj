@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		078176081EA4ED7C00308704 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 078176071EA4ED7C00308704 /* main.m */; };
+		078176101EA4F19D00308704 /* Atom.m in Sources */ = {isa = PBXBuildFile; fileRef = 0781760F1EA4F19D00308704 /* Atom.m */; };
+		078176171EA4F3C300308704 /* Atom+Nuclear.m in Sources */ = {isa = PBXBuildFile; fileRef = 078176161EA4F3C300308704 /* Atom+Nuclear.m */; };
+		0781761A1EA4F52F00308704 /* Hydrogen.m in Sources */ = {isa = PBXBuildFile; fileRef = 078176191EA4F52F00308704 /* Hydrogen.m */; };
+		0781761D1EA4F76B00308704 /* HydrogenHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0781761C1EA4F76B00308704 /* HydrogenHelper.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		078176021EA4ED7C00308704 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		078176041EA4ED7C00308704 /* MessageForward */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MessageForward; sourceTree = BUILT_PRODUCTS_DIR; };
+		078176071EA4ED7C00308704 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0781760E1EA4F19D00308704 /* Atom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Atom.h; sourceTree = "<group>"; };
+		0781760F1EA4F19D00308704 /* Atom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Atom.m; sourceTree = "<group>"; };
+		078176141EA4F33B00308704 /* Writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Writer.h; sourceTree = "<group>"; };
+		078176151EA4F3C300308704 /* Atom+Nuclear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Atom+Nuclear.h"; sourceTree = "<group>"; };
+		078176161EA4F3C300308704 /* Atom+Nuclear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Atom+Nuclear.m"; sourceTree = "<group>"; };
+		078176181EA4F52F00308704 /* Hydrogen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hydrogen.h; sourceTree = "<group>"; };
+		078176191EA4F52F00308704 /* Hydrogen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hydrogen.m; sourceTree = "<group>"; };
+		0781761B1EA4F76B00308704 /* HydrogenHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HydrogenHelper.h; sourceTree = "<group>"; };
+		0781761C1EA4F76B00308704 /* HydrogenHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HydrogenHelper.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		078176011EA4ED7C00308704 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		078175FB1EA4ED7C00308704 = {
+			isa = PBXGroup;
+			children = (
+				078176061EA4ED7C00308704 /* MessageForward */,
+				078176051EA4ED7C00308704 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		078176051EA4ED7C00308704 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				078176041EA4ED7C00308704 /* MessageForward */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		078176061EA4ED7C00308704 /* MessageForward */ = {
+			isa = PBXGroup;
+			children = (
+				078176071EA4ED7C00308704 /* main.m */,
+				078176141EA4F33B00308704 /* Writer.h */,
+				078176151EA4F3C300308704 /* Atom+Nuclear.h */,
+				078176161EA4F3C300308704 /* Atom+Nuclear.m */,
+				0781760E1EA4F19D00308704 /* Atom.h */,
+				0781760F1EA4F19D00308704 /* Atom.m */,
+				078176181EA4F52F00308704 /* Hydrogen.h */,
+				078176191EA4F52F00308704 /* Hydrogen.m */,
+				0781761B1EA4F76B00308704 /* HydrogenHelper.h */,
+				0781761C1EA4F76B00308704 /* HydrogenHelper.m */,
+			);
+			path = MessageForward;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		078176031EA4ED7C00308704 /* MessageForward */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0781760B1EA4ED7C00308704 /* Build configuration list for PBXNativeTarget "MessageForward" */;
+			buildPhases = (
+				078176001EA4ED7C00308704 /* Sources */,
+				078176011EA4ED7C00308704 /* Frameworks */,
+				078176021EA4ED7C00308704 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MessageForward;
+			productName = MessageForward;
+			productReference = 078176041EA4ED7C00308704 /* MessageForward */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		078175FC1EA4ED7C00308704 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Eric;
+				TargetAttributes = {
+					078176031EA4ED7C00308704 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 078175FF1EA4ED7C00308704 /* Build configuration list for PBXProject "MessageForward" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 078175FB1EA4ED7C00308704;
+			productRefGroup = 078176051EA4ED7C00308704 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				078176031EA4ED7C00308704 /* MessageForward */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		078176001EA4ED7C00308704 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				078176171EA4F3C300308704 /* Atom+Nuclear.m in Sources */,
+				0781761A1EA4F52F00308704 /* Hydrogen.m in Sources */,
+				078176101EA4F19D00308704 /* Atom.m in Sources */,
+				078176081EA4ED7C00308704 /* main.m in Sources */,
+				0781761D1EA4F76B00308704 /* HydrogenHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		078176091EA4ED7C00308704 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0781760A1EA4ED7C00308704 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0781760C1EA4ED7C00308704 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0781760D1EA4ED7C00308704 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		078175FF1EA4ED7C00308704 /* Build configuration list for PBXProject "MessageForward" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				078176091EA4ED7C00308704 /* Debug */,
+				0781760A1EA4ED7C00308704 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0781760B1EA4ED7C00308704 /* Build configuration list for PBXNativeTarget "MessageForward" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0781760C1EA4ED7C00308704 /* Debug */,
+				0781760D1EA4ED7C00308704 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 078175FC1EA4ED7C00308704 /* Project object */;
+}
