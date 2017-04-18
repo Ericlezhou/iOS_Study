@@ -22,7 +22,7 @@ int main(int argc, const char * argv[]) {
         [h bomb];               //resolveInstanceMethod
         [Hydrogen classBomb];   //resolveClassMethod
         
-        
+
         /*
             test fast forward
          */
@@ -32,7 +32,7 @@ int main(int argc, const char * argv[]) {
         /*
             test normal forward
          */
-        
+        [h performSelector:@selector(innerValue)];
         
         /*
             test object_getClass vs. [obj class]

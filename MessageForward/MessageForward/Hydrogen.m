@@ -9,6 +9,7 @@
 #import "Hydrogen.h"
 #import "HydrogenHelper.h"
 #import <objc/runtime.h>
+#import "AtomProxy.h"
 
 @interface Hydrogen()
 {
@@ -61,7 +62,7 @@ void classBombIMP(id self, SEL _cmd)
 {
     if (sel == @selector(classBomb))
     {
-        Class class = object_getClass(NSClassFromString(@"Hydrogen"));   //right
+        Class class = object_getClass(NSClassFromString(@"Hydrogen"));      //right
 //        Class class1 = [self superclass];                                 //wrong, cause Hydrogen's superclass is Atom, but not the isa pointer.
         class_addMethod(class, sel, (IMP)classBombIMP, "v@:");
         return YES;
@@ -81,5 +82,15 @@ void classBombIMP(id self, SEL _cmd)
 }
 
 //normal forward
-//-(void)forwardInvocation:(NSInvocation *)anInvocation{}
+-(NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
+{
+    return [AtomProxy instanceMethodSignatureForSelector:aSelector];
+}
+
+-(void)forwardInvocation:(NSInvocation *)anInvocation
+{
+    AtomProxy *proxy = [AtomProxy new];
+    proxy.innerValue = @"invocation test";
+    [anInvocation invokeWithTarget:proxy];
+}
 @end
