@@ -8,6 +8,8 @@
 
 #import "Hydrogen.h"
 #import "HydrogenHelper.h"
+#import <objc/runtime.h>
+
 @interface Hydrogen()
 {
     HydrogenHelper *_helper;
@@ -32,6 +34,41 @@
     }
     return self;
 }
+
+//add instance method
+void bombIMP(id self, SEL _cmd)
+{
+    NSLog(@"It may be the source of bomb!!! (bombIMP called)");
+}
+
++(BOOL)resolveInstanceMethod:(SEL)sel
+{
+    if (sel == @selector(bomb))
+    {
+        class_addMethod([self class], sel, (IMP)bombIMP, "v@:");
+        return YES;
+    }
+    return [super resolveInstanceMethod:sel];
+}
+
+//add class method
+void classBombIMP(id self, SEL _cmd)
+{
+    NSLog(@"It may be really the source of bomb!!! (classBombIMP called)");
+}
+
++(BOOL)resolveClassMethod:(SEL)sel
+{
+    if (sel == @selector(classBomb))
+    {
+        Class class = object_getClass(NSClassFromString(@"Hydrogen"));   //right
+//        Class class1 = [self superclass];                                 //wrong, cause Hydrogen's superclass is Atom, but not the isa pointer.
+        class_addMethod(class, sel, (IMP)classBombIMP, "v@:");
+        return YES;
+    }
+    return [super resolveClassMethod:sel];
+}
+
 
 //fast forward
 - (id)forwardingTargetForSelector:(SEL)aSelector

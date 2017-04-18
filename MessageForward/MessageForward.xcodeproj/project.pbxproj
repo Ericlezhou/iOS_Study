@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0726099A1EA5BE2C00ACC069 /* Atom+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 072609991EA5BE2C00ACC069 /* Atom+Helper.m */; };
 		078176081EA4ED7C00308704 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 078176071EA4ED7C00308704 /* main.m */; };
 		078176101EA4F19D00308704 /* Atom.m in Sources */ = {isa = PBXBuildFile; fileRef = 0781760F1EA4F19D00308704 /* Atom.m */; };
 		078176171EA4F3C300308704 /* Atom+Nuclear.m in Sources */ = {isa = PBXBuildFile; fileRef = 078176161EA4F3C300308704 /* Atom+Nuclear.m */; };
@@ -27,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		072609981EA5BE2C00ACC069 /* Atom+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Atom+Helper.h"; sourceTree = "<group>"; };
+		072609991EA5BE2C00ACC069 /* Atom+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Atom+Helper.m"; sourceTree = "<group>"; };
 		078176041EA4ED7C00308704 /* MessageForward */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MessageForward; sourceTree = BUILT_PRODUCTS_DIR; };
 		078176071EA4ED7C00308704 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0781760E1EA4F19D00308704 /* Atom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Atom.h; sourceTree = "<group>"; };
@@ -76,6 +79,8 @@
 				078176161EA4F3C300308704 /* Atom+Nuclear.m */,
 				0781760E1EA4F19D00308704 /* Atom.h */,
 				0781760F1EA4F19D00308704 /* Atom.m */,
+				072609981EA5BE2C00ACC069 /* Atom+Helper.h */,
+				072609991EA5BE2C00ACC069 /* Atom+Helper.m */,
 				078176181EA4F52F00308704 /* Hydrogen.h */,
 				078176191EA4F52F00308704 /* Hydrogen.m */,
 				0781761B1EA4F76B00308704 /* HydrogenHelper.h */,
@@ -145,6 +150,7 @@
 				0781761A1EA4F52F00308704 /* Hydrogen.m in Sources */,
 				078176101EA4F19D00308704 /* Atom.m in Sources */,
 				078176081EA4ED7C00308704 /* main.m in Sources */,
+				0726099A1EA5BE2C00ACC069 /* Atom+Helper.m in Sources */,
 				0781761D1EA4F76B00308704 /* HydrogenHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +280,7 @@
 				0781760D1EA4ED7C00308704 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
