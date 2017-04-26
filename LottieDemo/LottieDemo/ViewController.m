@@ -20,10 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.lottieLogo = [LOTAnimationView animationNamed:@"LottieLogo1"];
+    self.animationID = self.animationID.length ? self.animationID : @"IconTransitions";
+    self.lottieLogo = [LOTAnimationView animationNamed:self.animationID];
     self.lottieLogo.contentMode = UIViewContentModeScaleAspectFill;
     self.lottieLogo.frame = self.view.bounds;
+    [self.lottieLogo setLoopAnimation:YES];
     [self.view addSubview:self.lottieLogo];
     [self.view bringSubviewToFront:self.playBtn];
     [self.view bringSubviewToFront:self.pauseBtn];
@@ -42,6 +43,17 @@
     [self.lottieLogo play];
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.lottieLogo play];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    if (self.lottieLogo.isAnimationPlaying) {
+        [self.lottieLogo pause];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

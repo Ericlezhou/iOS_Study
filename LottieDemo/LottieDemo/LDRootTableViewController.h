@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LDRootTableViewController.h
 //  LottieDemo
 //
 //  Created by Eric on 2017/4/26.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-@property (nonatomic, strong) NSString* animationID;
-@end
+@interface LDRootTableViewController : UITableViewController
 
+@end
