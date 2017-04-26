@@ -7,9 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "Lottie.h"
 
 @interface ViewController ()
-
+@property (weak, nonatomic) IBOutlet UIButton *pauseBtn;
+@property (nonatomic, strong) LOTAnimationView *lottieLogo;
+@property (weak, nonatomic) IBOutlet UIButton *playBtn;
+@property (weak, nonatomic) IBOutlet UIButton *resetBtn;
 @end
 
 @implementation ViewController
@@ -17,6 +21,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.lottieLogo = [LOTAnimationView animationNamed:@"LottieLogo1"];
+    self.lottieLogo.contentMode = UIViewContentModeScaleAspectFill;
+    self.lottieLogo.frame = self.view.bounds;
+    [self.view addSubview:self.lottieLogo];
+    [self.view bringSubviewToFront:self.playBtn];
+    [self.view bringSubviewToFront:self.pauseBtn];
+    [self.view bringSubviewToFront:self.resetBtn];
+}
+- (IBAction)playBtn:(id)sender {
+    [self.lottieLogo play];
+}
+
+- (IBAction)pauseBtn:(id)sender {
+    [self.lottieLogo pause];
+}
+
+- (IBAction)resetBtn:(id)sender {
+    [self.lottieLogo setAnimationProgress:0];
+    [self.lottieLogo play];
 }
 
 
