@@ -22,7 +22,7 @@
     [super viewDidLoad];
     self.animationID = self.animationID.length ? self.animationID : @"IconTransitions";
     self.lottieLogo = [LOTAnimationView animationNamed:self.animationID];
-    self.lottieLogo.contentMode = UIViewContentModeScaleAspectFill;
+    self.lottieLogo.contentMode = UIViewContentModeScaleAspectFit;
     self.lottieLogo.frame = self.view.bounds;
     [self.lottieLogo setLoopAnimation:YES];
     [self.view addSubview:self.lottieLogo];

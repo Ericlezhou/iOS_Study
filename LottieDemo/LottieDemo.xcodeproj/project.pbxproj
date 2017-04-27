@@ -93,6 +93,9 @@
 		07F2AED71EB04FF5009CA14F /* vcTransition2.json in Resources */ = {isa = PBXBuildFile; fileRef = 07F2AEAD1EB04FF5009CA14F /* vcTransition2.json */; };
 		07F2AED81EB04FF5009CA14F /* Watermelon.json in Resources */ = {isa = PBXBuildFile; fileRef = 07F2AEAE1EB04FF5009CA14F /* Watermelon.json */; };
 		07F2AEDB1EB0795F009CA14F /* LDRootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07F2AEDA1EB0795F009CA14F /* LDRootTableViewController.m */; };
+		07F2AF2C1EB19C00009CA14F /* img_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F2AF2A1EB19C00009CA14F /* img_0.png */; };
+		07F2AF2D1EB19C00009CA14F /* img_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 07F2AF2B1EB19C00009CA14F /* img_1.png */; };
+		07F2AF2F1EB19D2E009CA14F /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 07F2AF2E1EB19D2E009CA14F /* data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -250,6 +253,9 @@
 		07F2AEAE1EB04FF5009CA14F /* Watermelon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Watermelon.json; sourceTree = "<group>"; };
 		07F2AED91EB0795F009CA14F /* LDRootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDRootTableViewController.h; sourceTree = "<group>"; };
 		07F2AEDA1EB0795F009CA14F /* LDRootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDRootTableViewController.m; sourceTree = "<group>"; };
+		07F2AF2A1EB19C00009CA14F /* img_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img_0.png; path = Assets/images/img_0.png; sourceTree = "<group>"; };
+		07F2AF2B1EB19C00009CA14F /* img_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img_1.png; path = Assets/images/img_1.png; sourceTree = "<group>"; };
+		07F2AF2E1EB19D2E009CA14F /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -346,6 +352,7 @@
 		07F2ADEA1EB0482D009CA14F /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				07F2AF291EB19BF2009CA14F /* Resources */,
 				07F2AE721EB04C49009CA14F /* MacCompatability */,
 				07F2ADEB1EB0490C009CA14F /* AnimatableLayers */,
 				07F2ADFE1EB0490C009CA14F /* AnimatableProperties */,
@@ -502,6 +509,7 @@
 		07F2AE831EB04FF5009CA14F /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				07F2AF2E1EB19D2E009CA14F /* data.json */,
 				07F2AE841EB04FF5009CA14F /* 9squares-AlBoardman.json */,
 				07F2AE851EB04FF5009CA14F /* HamburgerArrow.json */,
 				07F2AE861EB04FF5009CA14F /* IconTransitions.json */,
@@ -554,6 +562,15 @@
 				07F2AEAB1EB04FF5009CA14F /* Z.json */,
 			);
 			path = TypeFace;
+			sourceTree = "<group>";
+		};
+		07F2AF291EB19BF2009CA14F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				07F2AF2A1EB19C00009CA14F /* img_0.png */,
+				07F2AF2B1EB19C00009CA14F /* img_1.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -623,7 +640,8 @@
 				TargetAttributes = {
 					07F2ADB31EB045FC009CA14F = {
 						CreatedOnToolsVersion = 8.3;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = NX42WR44YU;
+						ProvisioningStyle = Manual;
 					};
 					07F2ADCC1EB045FD009CA14F = {
 						CreatedOnToolsVersion = 8.3;
@@ -672,12 +690,14 @@
 				07F2AEB81EB04FF5009CA14F /* A.json in Resources */,
 				07F2AED71EB04FF5009CA14F /* vcTransition2.json in Resources */,
 				07F2AEBE1EB04FF5009CA14F /* Comma.json in Resources */,
+				07F2AF2C1EB19C00009CA14F /* img_0.png in Resources */,
 				07F2AEB71EB04FF5009CA14F /* TwitterHeart.json in Resources */,
 				07F2AED41EB04FF5009CA14F /* Y.json in Resources */,
 				07F2ADC71EB045FC009CA14F /* LaunchScreen.storyboard in Resources */,
 				07F2AEC71EB04FF5009CA14F /* L.json in Resources */,
 				07F2AEC41EB04FF5009CA14F /* I.json in Resources */,
 				07F2AEB61EB04FF5009CA14F /* PinJump.json in Resources */,
+				07F2AF2D1EB19C00009CA14F /* img_1.png in Resources */,
 				07F2AEC31EB04FF5009CA14F /* H.json in Resources */,
 				07F2AEC01EB04FF5009CA14F /* E.json in Resources */,
 				07F2AEB51EB04FF5009CA14F /* MotionCorpse-Jrcanest.json in Resources */,
@@ -703,6 +723,7 @@
 				07F2AECF1EB04FF5009CA14F /* T.json in Resources */,
 				07F2AEB91EB04FF5009CA14F /* Apostrophe.json in Resources */,
 				07F2AED81EB04FF5009CA14F /* Watermelon.json in Resources */,
+				07F2AF2F1EB19D2E009CA14F /* data.json in Resources */,
 				07F2AEAF1EB04FF5009CA14F /* 9squares-AlBoardman.json in Resources */,
 				07F2AEC21EB04FF5009CA14F /* G.json in Resources */,
 				07F2AECB1EB04FF5009CA14F /* P.json in Resources */,
@@ -919,12 +940,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NX42WR44YU;
 				INFOPLIST_FILE = LottieDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = eric.learn.lezhou.LottieDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "a33d5732-c949-4902-a720-83aba28fbaa3";
+				PROVISIONING_PROFILE_SPECIFIER = "Handle iOS Development";
 			};
 			name = Debug;
 		};
@@ -933,12 +955,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NX42WR44YU;
 				INFOPLIST_FILE = LottieDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = eric.learn.lezhou.LottieDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "a33d5732-c949-4902-a720-83aba28fbaa3";
+				PROVISIONING_PROFILE_SPECIFIER = "Handle iOS Development";
 			};
 			name = Release;
 		};

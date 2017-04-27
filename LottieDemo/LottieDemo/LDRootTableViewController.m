@@ -31,7 +31,8 @@
                     @"TwitterHeart",
                     @"vcTransition1",
                     @"vcTransition2",
-                    @"Watermelon"];
+                    @"Watermelon",
+                    @"data"];
     });
     return _titles;
 }
