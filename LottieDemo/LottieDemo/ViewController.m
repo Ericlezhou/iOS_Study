@@ -21,7 +21,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.animationID = self.animationID.length ? self.animationID : @"IconTransitions";
-    self.lottieLogo = [LOTAnimationView animationNamed:self.animationID];
+    if ([self.animationID isEqualToString:@"local"]) {
+        NSString *NspathDocuments = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        NSString *targetPath = [NspathDocuments stringByAppendingPathComponent:@"data.json"];
+        self.lottieLogo = [LOTAnimationView animationWithFile:targetPath];
+    }else{
+        self.lottieLogo = [LOTAnimationView animationNamed:self.animationID];
+    }
     self.lottieLogo.contentMode = UIViewContentModeScaleAspectFit;
     self.lottieLogo.frame = self.view.bounds;
     [self.lottieLogo setLoopAnimation:YES];

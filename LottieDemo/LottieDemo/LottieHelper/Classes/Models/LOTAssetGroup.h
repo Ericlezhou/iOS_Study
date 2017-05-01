@@ -12,6 +12,7 @@
 @class LOTAsset;
 @class LOTLayerGroup;
 @interface LOTAssetGroup : NSObject
+@property (nonatomic, copy) NSString * _Nullable rootDir;
 
 - (instancetype _Nonnull)initWithJSON:(NSArray * _Nonnull)jsonArray;
 

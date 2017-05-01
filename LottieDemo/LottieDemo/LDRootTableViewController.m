@@ -32,7 +32,8 @@
                     @"vcTransition1",
                     @"vcTransition2",
                     @"Watermelon",
-                    @"data"];
+                    @"data",
+                    @"local"];
     });
     return _titles;
 }

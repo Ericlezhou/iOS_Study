@@ -16,6 +16,7 @@ typedef void (^LOTAnimationCompletionBlock)(BOOL animationFinished);
 + (instancetype)animationNamed:(NSString *)animationName NS_SWIFT_NAME(init(name:));
 + (instancetype)animationNamed:(NSString *)animationName inBundle:(NSBundle *)bundle NS_SWIFT_NAME(init(name:bundle:));
 + (instancetype)animationFromJSON:(NSDictionary *)animationJSON NS_SWIFT_NAME(init(json:));
++ (instancetype)animationWithFile:(NSString *)filePath;
 
 - (instancetype)initWithContentsOfURL:(NSURL *)url;
 
