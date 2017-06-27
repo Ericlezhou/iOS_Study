@@ -34,13 +34,31 @@
         fromView = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey].view;
         toView = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey].view;
     }
-    CGRect initialFrame = _presenting ? _originFrame : toView.frame;
-    CGRect finalFrame = _presenting ? toView.frame : _originFrame;
+    
+    UIView *herbView = _presenting ? toView : fromView;
+    CGRect initialFrame = _presenting ? _originFrame : herbView.frame;
+    CGRect finalFrame = _presenting ? herbView.frame : _originFrame;
     CGFloat xScaleFactor = _presenting ? initialFrame.size.width / finalFrame.size.width : finalFrame.size.width / initialFrame.size.width;
     CGFloat yScaleFactor = _presenting ? initialFrame.size.height / finalFrame.size.height : finalFrame.size.height / initialFrame.size.height;
     CGAffineTransform scaleTransform = CGAffineTransformMakeScale(xScaleFactor, yScaleFactor);
+    if (_presenting) {
+        herbView.transform = scaleTransform;
+        herbView.center = CGPointMake(initialFrame.origin.x + initialFrame.size.width  / 2,initialFrame.origin.y + initialFrame.size.height / 2);
+        herbView.clipsToBounds = YES;
+    }
     [containerView addSubview:toView];
-    toView.alpha = 0;
+    [containerView bringSubviewToFront:herbView];
+    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.4 initialSpringVelocity:0 options:UIViewAnimationOptionLayoutSubviews animations:^{
+        herbView.transform = _presenting ? CGAffineTransformIdentity : scaleTransform;
+        herbView.center = CGPointMake(finalFrame.origin.x + finalFrame.size.width / 2, finalFrame.origin.y +finalFrame.size.height / 2);
+    } completion:^(BOOL finished) {
+        [transitionContext completeTransition:YES];
+        if (!_presenting) {
+            if (self.dismissCompletionBlock) {
+                self.dismissCompletionBlock();
+            }
+        }
+    }];
     
 }
 

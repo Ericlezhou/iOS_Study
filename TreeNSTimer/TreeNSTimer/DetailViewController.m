@@ -21,6 +21,12 @@
     UIImageView *view = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"img"]];
     [self.view addSubview:view];
     view.frame = self.view.bounds;
+    view.userInteractionEnabled = YES;
+    [view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touchImg:)]];
+}
+
+- (void)touchImg:(id)sender{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

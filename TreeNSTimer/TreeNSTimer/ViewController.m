@@ -37,7 +37,12 @@ __weak NSString *string_weak_copy   = nil;
     [self.presentImgeView addGestureRecognizer:gesture];
     if (!self.transition) {
         self.transition = [[PopAnimator alloc] init];
+        __weak typeof(self) weakSelf = self;
+        self.transition.dismissCompletionBlock = ^{
+            weakSelf.presentImgeView.hidden = NO;
+        };
     }
+    
 }
 
 
