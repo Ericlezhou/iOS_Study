@@ -33,6 +33,8 @@ __weak NSString *string_weak_copy   = nil;
     
     [self.presentImgeView setImage:[UIImage imageNamed:@"img"]];
     self.presentImgeView.userInteractionEnabled = YES;
+    self.presentImgeView.layer.cornerRadius = 20;
+    self.presentImgeView.clipsToBounds = YES;
     UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toucheImage:)];
     [self.presentImgeView addGestureRecognizer:gesture];
     if (!self.transition) {

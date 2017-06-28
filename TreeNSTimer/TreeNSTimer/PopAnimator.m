@@ -21,7 +21,7 @@
 }
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext{
-    return 0.5;
+    return 2;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext{
@@ -45,10 +45,12 @@
         herbView.transform = scaleTransform;
         herbView.center = CGPointMake(initialFrame.origin.x + initialFrame.size.width  / 2,initialFrame.origin.y + initialFrame.size.height / 2);
         herbView.clipsToBounds = YES;
+        herbView.layer.cornerRadius = 20 / xScaleFactor;
     }
     [containerView addSubview:toView];
     [containerView bringSubviewToFront:herbView];
-    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.4 initialSpringVelocity:0 options:UIViewAnimationOptionLayoutSubviews animations:^{
+    
+    [UIView animateWithDuration:2 delay:0 usingSpringWithDamping:0.4 initialSpringVelocity:0 options:UIViewAnimationOptionLayoutSubviews animations:^{
         herbView.transform = _presenting ? CGAffineTransformIdentity : scaleTransform;
         herbView.center = CGPointMake(finalFrame.origin.x + finalFrame.size.width / 2, finalFrame.origin.y +finalFrame.size.height / 2);
     } completion:^(BOOL finished) {
@@ -59,7 +61,18 @@
             }
         }
     }];
+    [self roundCornersWithLayer:herbView.layer toRadius:_presenting ? 0 : 20 / xScaleFactor withDuration:1];
     
+}
+
+- (void)roundCornersWithLayer:(CALayer *) layer toRadius:(CGFloat) radius withDuration:(CGFloat) duration{
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"cornerRadius"];
+    animation.duration = duration;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    animation.fromValue = @(layer.cornerRadius);
+    animation.toValue = @(radius);
+    [layer addAnimation:animation forKey:@"setCornerRadius:"];
+    layer.cornerRadius = radius;
 }
 
 @end

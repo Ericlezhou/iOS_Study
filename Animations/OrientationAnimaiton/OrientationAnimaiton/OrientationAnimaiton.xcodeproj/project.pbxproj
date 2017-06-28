@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		076960D21F039F4100C5A59F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 076960D11F039F4100C5A59F /* main.m */; };
+		076960D51F039F4100C5A59F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 076960D41F039F4100C5A59F /* AppDelegate.m */; };
+		076960D81F039F4100C5A59F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 076960D71F039F4100C5A59F /* ViewController.m */; };
+		076960DB1F039F4100C5A59F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076960D91F039F4100C5A59F /* Main.storyboard */; };
+		076960DD1F039F4100C5A59F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076960DC1F039F4100C5A59F /* Assets.xcassets */; };
+		076960E01F039F4100C5A59F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076960DE1F039F4100C5A59F /* LaunchScreen.storyboard */; };
+		076960EB1F039F4100C5A59F /* OrientationAnimaitonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 076960EA1F039F4100C5A59F /* OrientationAnimaitonTests.m */; };
+		076960F61F039F4100C5A59F /* OrientationAnimaitonUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 076960F51F039F4100C5A59F /* OrientationAnimaitonUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		076960E71F039F4100C5A59F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 076960C51F039F4100C5A59F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 076960CC1F039F4100C5A59F;
+			remoteInfo = OrientationAnimaiton;
+		};
+		076960F21F039F4100C5A59F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 076960C51F039F4100C5A59F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 076960CC1F039F4100C5A59F;
+			remoteInfo = OrientationAnimaiton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		076960CD1F039F4100C5A59F /* OrientationAnimaiton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrientationAnimaiton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		076960D11F039F4100C5A59F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		076960D31F039F4100C5A59F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		076960D41F039F4100C5A59F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		076960D61F039F4100C5A59F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		076960D71F039F4100C5A59F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		076960DA1F039F4100C5A59F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		076960DC1F039F4100C5A59F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		076960DF1F039F4100C5A59F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		076960E11F039F4100C5A59F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		076960E61F039F4100C5A59F /* OrientationAnimaitonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrientationAnimaitonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		076960EA1F039F4100C5A59F /* OrientationAnimaitonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrientationAnimaitonTests.m; sourceTree = "<group>"; };
+		076960EC1F039F4100C5A59F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		076960F11F039F4100C5A59F /* OrientationAnimaitonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrientationAnimaitonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		076960F51F039F4100C5A59F /* OrientationAnimaitonUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrientationAnimaitonUITests.m; sourceTree = "<group>"; };
+		076960F71F039F4100C5A59F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		076960CA1F039F4100C5A59F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076960E31F039F4100C5A59F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076960EE1F039F4100C5A59F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		076960C41F039F4100C5A59F = {
+			isa = PBXGroup;
+			children = (
+				076960CF1F039F4100C5A59F /* OrientationAnimaiton */,
+				076960E91F039F4100C5A59F /* OrientationAnimaitonTests */,
+				076960F41F039F4100C5A59F /* OrientationAnimaitonUITests */,
+				076960CE1F039F4100C5A59F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		076960CE1F039F4100C5A59F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				076960CD1F039F4100C5A59F /* OrientationAnimaiton.app */,
+				076960E61F039F4100C5A59F /* OrientationAnimaitonTests.xctest */,
+				076960F11F039F4100C5A59F /* OrientationAnimaitonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		076960CF1F039F4100C5A59F /* OrientationAnimaiton */ = {
+			isa = PBXGroup;
+			children = (
+				076960D31F039F4100C5A59F /* AppDelegate.h */,
+				076960D41F039F4100C5A59F /* AppDelegate.m */,
+				076960D61F039F4100C5A59F /* ViewController.h */,
+				076960D71F039F4100C5A59F /* ViewController.m */,
+				076960D91F039F4100C5A59F /* Main.storyboard */,
+				076960DC1F039F4100C5A59F /* Assets.xcassets */,
+				076960DE1F039F4100C5A59F /* LaunchScreen.storyboard */,
+				076960E11F039F4100C5A59F /* Info.plist */,
+				076960D01F039F4100C5A59F /* Supporting Files */,
+			);
+			path = OrientationAnimaiton;
+			sourceTree = "<group>";
+		};
+		076960D01F039F4100C5A59F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				076960D11F039F4100C5A59F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		076960E91F039F4100C5A59F /* OrientationAnimaitonTests */ = {
+			isa = PBXGroup;
+			children = (
+				076960EA1F039F4100C5A59F /* OrientationAnimaitonTests.m */,
+				076960EC1F039F4100C5A59F /* Info.plist */,
+			);
+			path = OrientationAnimaitonTests;
+			sourceTree = "<group>";
+		};
+		076960F41F039F4100C5A59F /* OrientationAnimaitonUITests */ = {
+			isa = PBXGroup;
+			children = (
+				076960F51F039F4100C5A59F /* OrientationAnimaitonUITests.m */,
+				076960F71F039F4100C5A59F /* Info.plist */,
+			);
+			path = OrientationAnimaitonUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		076960CC1F039F4100C5A59F /* OrientationAnimaiton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 076960FA1F039F4100C5A59F /* Build configuration list for PBXNativeTarget "OrientationAnimaiton" */;
+			buildPhases = (
+				076960C91F039F4100C5A59F /* Sources */,
+				076960CA1F039F4100C5A59F /* Frameworks */,
+				076960CB1F039F4100C5A59F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OrientationAnimaiton;
+			productName = OrientationAnimaiton;
+			productReference = 076960CD1F039F4100C5A59F /* OrientationAnimaiton.app */;
+			productType = "com.apple.product-type.application";
+		};
+		076960E51F039F4100C5A59F /* OrientationAnimaitonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 076960FD1F039F4100C5A59F /* Build configuration list for PBXNativeTarget "OrientationAnimaitonTests" */;
+			buildPhases = (
+				076960E21F039F4100C5A59F /* Sources */,
+				076960E31F039F4100C5A59F /* Frameworks */,
+				076960E41F039F4100C5A59F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				076960E81F039F4100C5A59F /* PBXTargetDependency */,
+			);
+			name = OrientationAnimaitonTests;
+			productName = OrientationAnimaitonTests;
+			productReference = 076960E61F039F4100C5A59F /* OrientationAnimaitonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		076960F01F039F4100C5A59F /* OrientationAnimaitonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 076961001F039F4100C5A59F /* Build configuration list for PBXNativeTarget "OrientationAnimaitonUITests" */;
+			buildPhases = (
+				076960ED1F039F4100C5A59F /* Sources */,
+				076960EE1F039F4100C5A59F /* Frameworks */,
+				076960EF1F039F4100C5A59F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				076960F31F039F4100C5A59F /* PBXTargetDependency */,
+			);
+			name = OrientationAnimaitonUITests;
+			productName = OrientationAnimaitonUITests;
+			productReference = 076960F11F039F4100C5A59F /* OrientationAnimaitonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		076960C51F039F4100C5A59F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Eric;
+				TargetAttributes = {
+					076960CC1F039F4100C5A59F = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = NX42WR44YU;
+						ProvisioningStyle = Manual;
+					};
+					076960E51F039F4100C5A59F = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 076960CC1F039F4100C5A59F;
+					};
+					076960F01F039F4100C5A59F = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 076960CC1F039F4100C5A59F;
+					};
+				};
+			};
+			buildConfigurationList = 076960C81F039F4100C5A59F /* Build configuration list for PBXProject "OrientationAnimaiton" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 076960C41F039F4100C5A59F;
+			productRefGroup = 076960CE1F039F4100C5A59F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				076960CC1F039F4100C5A59F /* OrientationAnimaiton */,
+				076960E51F039F4100C5A59F /* OrientationAnimaitonTests */,
+				076960F01F039F4100C5A59F /* OrientationAnimaitonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		076960CB1F039F4100C5A59F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				076960E01F039F4100C5A59F /* LaunchScreen.storyboard in Resources */,
+				076960DD1F039F4100C5A59F /* Assets.xcassets in Resources */,
+				076960DB1F039F4100C5A59F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076960E41F039F4100C5A59F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076960EF1F039F4100C5A59F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		076960C91F039F4100C5A59F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				076960D81F039F4100C5A59F /* ViewController.m in Sources */,
+				076960D51F039F4100C5A59F /* AppDelegate.m in Sources */,
+				076960D21F039F4100C5A59F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076960E21F039F4100C5A59F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				076960EB1F039F4100C5A59F /* OrientationAnimaitonTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076960ED1F039F4100C5A59F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				076960F61F039F4100C5A59F /* OrientationAnimaitonUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		076960E81F039F4100C5A59F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 076960CC1F039F4100C5A59F /* OrientationAnimaiton */;
+			targetProxy = 076960E71F039F4100C5A59F /* PBXContainerItemProxy */;
+		};
+		076960F31F039F4100C5A59F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 076960CC1F039F4100C5A59F /* OrientationAnimaiton */;
+			targetProxy = 076960F21F039F4100C5A59F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		076960D91F039F4100C5A59F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				076960DA1F039F4100C5A59F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		076960DE1F039F4100C5A59F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				076960DF1F039F4100C5A59F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		076960F81F039F4100C5A59F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		076960F91F039F4100C5A59F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		076960FB1F039F4100C5A59F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NX42WR44YU;
+				INFOPLIST_FILE = OrientationAnimaiton/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = eric.learn.lezhou.OrientationAnimaiton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a33d5732-c949-4902-a720-83aba28fbaa3";
+				PROVISIONING_PROFILE_SPECIFIER = "Handle iOS Development";
+			};
+			name = Debug;
+		};
+		076960FC1F039F4100C5A59F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = OrientationAnimaiton/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = eric.learn.lezhou.OrientationAnimaiton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+		076960FE1F039F4100C5A59F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OrientationAnimaitonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = eric.learn.lezhou.OrientationAnimaitonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OrientationAnimaiton.app/OrientationAnimaiton";
+			};
+			name = Debug;
+		};
+		076960FF1F039F4100C5A59F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OrientationAnimaitonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = eric.learn.lezhou.OrientationAnimaitonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OrientationAnimaiton.app/OrientationAnimaiton";
+			};
+			name = Release;
+		};
+		076961011F039F4100C5A59F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = OrientationAnimaitonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = eric.learn.lezhou.OrientationAnimaitonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = OrientationAnimaiton;
+			};
+			name = Debug;
+		};
+		076961021F039F4100C5A59F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = OrientationAnimaitonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = eric.learn.lezhou.OrientationAnimaitonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = OrientationAnimaiton;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		076960C81F039F4100C5A59F /* Build configuration list for PBXProject "OrientationAnimaiton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				076960F81F039F4100C5A59F /* Debug */,
+				076960F91F039F4100C5A59F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		076960FA1F039F4100C5A59F /* Build configuration list for PBXNativeTarget "OrientationAnimaiton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				076960FB1F039F4100C5A59F /* Debug */,
+				076960FC1F039F4100C5A59F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		076960FD1F039F4100C5A59F /* Build configuration list for PBXNativeTarget "OrientationAnimaitonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				076960FE1F039F4100C5A59F /* Debug */,
+				076960FF1F039F4100C5A59F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		076961001F039F4100C5A59F /* Build configuration list for PBXNativeTarget "OrientationAnimaitonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				076961011F039F4100C5A59F /* Debug */,
+				076961021F039F4100C5A59F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 076960C51F039F4100C5A59F /* Project object */;
+}
