@@ -35,6 +35,8 @@
         toView = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey].view;
     }
     
+    UIView *fulllScreenView = _presenting ? toView : fromView;
+    
     UIView *herbView = _presenting ? toView : fromView;
     CGRect initialFrame = _presenting ? _originFrame : herbView.frame;
     CGRect finalFrame = _presenting ? herbView.frame : _originFrame;
@@ -53,6 +55,7 @@
     [UIView animateWithDuration:2 delay:0 usingSpringWithDamping:0.4 initialSpringVelocity:0 options:UIViewAnimationOptionLayoutSubviews animations:^{
         herbView.transform = _presenting ? CGAffineTransformIdentity : scaleTransform;
         herbView.center = CGPointMake(finalFrame.origin.x + finalFrame.size.width / 2, finalFrame.origin.y +finalFrame.size.height / 2);
+        containerView.alpha = 1;
     } completion:^(BOOL finished) {
         [transitionContext completeTransition:YES];
         if (!_presenting) {
