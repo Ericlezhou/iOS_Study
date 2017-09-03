@@ -7,9 +7,12 @@
 //
 
 #import "LRPresentTransitionViewController.h"
+#import "LRTargetPresentViewController.h"
+#import "LRPresentAnimator.h"
 
 @interface LRPresentTransitionViewController ()
-@property (nonatomic, strong) UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 
 @end
 
@@ -17,20 +20,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"IMG_0294.png"]];
-    _imageView.contentMode = UIViewContentModeScaleAspectFill;
-    CGFloat imageW = 150;
-    CGFloat imageH = 200;
-    _imageView.frame = CGRectMake(0, 0, imageW, imageH);
-    _imageView.center = CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetHeight(self.view.bounds) - imageH * 0.5);
-    _imageView.userInteractionEnabled = YES;
-    [self.view addSubview:_imageView];
-    UITapGestureRecognizer *tapGe = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTapped:)];
-    [_imageView addGestureRecognizer:tapGe];
+    UITapGestureRecognizer *tapG = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClicked:)];
+    [_imageView addGestureRecognizer:tapG];
 }
 
-- (void)imageTapped:(id)sender{
-    NSLog(@"");
+- (void)imageClicked:(id)sender {
+    LRTargetPresentViewController *viewCtl = [[LRTargetPresentViewController alloc] initWithNibName:nil bundle:nil];
+    viewCtl.transitioningDelegate = self;
+    [self presentViewController:viewCtl animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,6 +35,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - UIViewControllerTransitioningDelegate
+- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+    LRPresentAnimator *animator = [[LRPresentAnimator alloc] init];
+    
+    return animator;
+}
 
-
+- (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
+    LRPresentAnimator *animator = [[LRPresentAnimator alloc] init];
+    
+    return animator;
+}
 @end

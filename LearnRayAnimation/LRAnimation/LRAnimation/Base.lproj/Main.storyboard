@@ -134,12 +134,22 @@
                     <view key="view" contentMode="scaleToFill" id="SXo-5x-wpp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_0294.png" translatesAutoresizingMaskIntoConstraints="NO" id="E2y-bS-UdG">
+                                <rect key="frame" x="110" y="386" width="154" height="281"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="E2y-bS-UdG" id="zLv-bE-BVE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xg5-JP-Kc2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1534" y="-989"/>
+            <point key="canvasLocation" x="1533.5999999999999" y="-989.05547226386818"/>
         </scene>
         <!--View Animation-->
         <scene sceneID="Llz-Ad-5n1">
@@ -255,4 +265,7 @@
             <point key="canvasLocation" x="780" y="-1446.0269865067467"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="IMG_0294.png" width="750" height="1334"/>
+    </resources>
 </document>

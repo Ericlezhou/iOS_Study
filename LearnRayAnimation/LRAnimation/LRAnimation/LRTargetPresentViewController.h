@@ -1,5 +1,5 @@
 //
-//  LRPresentTransitionViewController.h
+//  LRTargetPresentViewController.h
 //  LRAnimation
 //
 //  Created by le zhou on 2017/9/3.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LRPresentTransitionViewController : UIViewController <UIViewControllerTransitioningDelegate>
+@interface LRTargetPresentViewController : UIViewController
 
 @end
