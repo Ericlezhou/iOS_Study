@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  LearnRayAnimation
+//  LRAnimation
 //
-//  Created by le zhou on 2017/6/24.
+//  Created by le zhou on 2017/9/3.
 //  Copyright © 2017年 le zhou. All rights reserved.
 //
 

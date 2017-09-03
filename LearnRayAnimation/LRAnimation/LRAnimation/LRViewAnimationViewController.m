@@ -1,14 +1,14 @@
 //
-//  ViewController.m
-//  LearnRayAnimation
+//  LRViewAnimationViewController.m
+//  LRAnimation
 //
-//  Created by le zhou on 2017/6/24.
+//  Created by le zhou on 2017/9/3.
 //  Copyright © 2017年 le zhou. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "LRViewAnimationViewController.h"
 
-@interface ViewController ()
+@interface LRViewAnimationViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *lraBtn;
 @property (weak, nonatomic) IBOutlet UITextField *lraTextField;
 @property (weak, nonatomic) IBOutlet UITextField *lraTextField2;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation ViewController
+@implementation LRViewAnimationViewController
 
 - (CGRect)makeRectBeforeAnimation:(CGRect) rect{
     return CGRectMake(rect.origin.x - self.view.bounds.size.width, rect.origin.y, rect.size.width, rect.size.height);
@@ -43,7 +43,7 @@
     //view animation to the lraTextField:
     self.lraTextField.frame =[self makeRectBeforeAnimation:self.lraTextField.frame];
     //layer animation specify both the start and end values and do nothing to the lraTextField2 at first
-    self.lraTextField2.layer.position = CGPointMake(-self.view.bounds.size.width, self.lraTextField2.layer.position.y);
+    self.lraTextField2.layer.position = CGPointMake(CGRectGetMidX(self.lraTextField2.frame) - self.view.bounds.size.width, self.lraTextField2.layer.position.y);
     
     //3.渐变效果
     self.cloud1.alpha = 0;
@@ -76,13 +76,19 @@
     [UIView animateWithDuration:0.5 delay:0.3 options:UIViewAnimationOptionTransitionNone animations:^{
         self.lraTextField.frame = [self makeRectAfterAnimation:self.lraTextField.frame];
     } completion:nil];
+    
     //layer animation to lraTextField2
     CABasicAnimation *basicAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
-    basicAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(CGRectGetMidX(self.lraTextField2.frame) - self.view.bounds.size.width, CGRectGetMidY(self.lraTextField2.frame))];
-    basicAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(CGRectGetMidX(self.lraTextField2.frame), CGRectGetMidY(self.lraTextField2.frame))];
+    basicAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(CGRectGetMidX(self.view.bounds) - self.view.bounds.size.width, CGRectGetMidY(self.lraTextField2.frame))];
+    basicAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(CGRectGetMidX(self.view.bounds), CGRectGetMidY(self.lraTextField2.frame))];
+    //动画执行完view不消失
+    basicAnimation.removedOnCompletion = NO;
+    //控制动画的开始时间和结束时间的展示
     basicAnimation.fillMode = kCAFillModeBoth;
+    //动画执行的速度
+    basicAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     basicAnimation.duration = 0.5;
-    basicAnimation.beginTime = CACurrentMediaTime() + 0.4;
+    basicAnimation.beginTime = CACurrentMediaTime() + 0.3;
     [self.lraTextField2.layer addAnimation:basicAnimation forKey:nil];
     
     
