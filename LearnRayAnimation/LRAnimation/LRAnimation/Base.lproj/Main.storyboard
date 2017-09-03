@@ -79,6 +79,24 @@
                     <view key="view" contentMode="scaleToFill" id="GlT-X6-rOk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxx-if-l3w">
+                                <rect key="frame" x="125" y="117" width="124" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Present animation"/>
+                                <connections>
+                                    <segue destination="iv3-E7-2Tn" kind="show" id="H6X-S8-lLU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPJ-PZ-r8N">
+                                <rect key="frame" x="114" y="190" width="148" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Orientation animation"/>
+                                <connections>
+                                    <segue destination="7dR-46-S4r" kind="show" id="VTp-dw-Zuj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ldo-aW-hxp"/>
@@ -86,6 +104,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7I-Bs-JN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="713" y="-488.99999999999994"/>
+        </scene>
+        <!--Navigation Transition-->
+        <scene sceneID="ptG-zv-PzU">
+            <objects>
+                <viewController title="Navigation Transition" id="7dR-46-S4r" customClass="LRNavigationTranstionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kAE-ov-2aj"/>
+                        <viewControllerLayoutGuide type="bottom" id="9ya-LT-fdT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5P2-Yl-Axi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zwD-6L-Ksc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1534" y="-267"/>
+        </scene>
+        <!--Present Transition-->
+        <scene sceneID="OIL-Bu-9SW">
+            <objects>
+                <viewController title="Present Transition" id="iv3-E7-2Tn" customClass="LRPresentTransitionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i8F-yY-OXD"/>
+                        <viewControllerLayoutGuide type="bottom" id="j7h-km-cOb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SXo-5x-wpp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xg5-JP-Kc2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1534" y="-989"/>
         </scene>
         <!--View Animation-->
         <scene sceneID="Llz-Ad-5n1">

@@ -1,22 +1,22 @@
 //
-//  LRViewControllerAnimationViewController.m
+//  LRNavigationTranstionViewController.m
 //  LRAnimation
 //
 //  Created by le zhou on 2017/9/3.
 //  Copyright © 2017年 le zhou. All rights reserved.
 //
 
-#import "LRViewControllerAnimationViewController.h"
+#import "LRNavigationTranstionViewController.h"
 
-@interface LRViewControllerAnimationViewController ()
+@interface LRNavigationTranstionViewController ()
 
 @end
 
-@implementation LRViewControllerAnimationViewController
+@implementation LRNavigationTranstionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.frame = CGRectMake(0, self.navigationController.navigationBar.bounds.size.height, self.view.bounds.size.width, self.view.bounds.size.height);
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

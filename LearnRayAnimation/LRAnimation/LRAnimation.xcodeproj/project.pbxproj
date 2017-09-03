@@ -14,8 +14,9 @@
 		070AD97F1F5BA3EE0055F524 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 070AD97D1F5BA3EE0055F524 /* LaunchScreen.storyboard */; };
 		070AD98A1F5BA3EE0055F524 /* LRAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070AD9891F5BA3EE0055F524 /* LRAnimationTests.m */; };
 		070AD9951F5BA3EE0055F524 /* LRAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 070AD9941F5BA3EE0055F524 /* LRAnimationUITests.m */; };
-		070AD9AA1F5BB17A0055F524 /* LRViewControllerAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 070AD9A91F5BB17A0055F524 /* LRViewControllerAnimationViewController.m */; };
 		07BAEF9F1F5BC2C7009A0BEA /* LRViewAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BAEF9E1F5BC2C7009A0BEA /* LRViewAnimationViewController.m */; };
+		07BAEFA21F5C21E5009A0BEA /* LRPresentTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BAEFA11F5C21E5009A0BEA /* LRPresentTransitionViewController.m */; };
+		07BAEFA51F5C221A009A0BEA /* LRNavigationTranstionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BAEFA41F5C221A009A0BEA /* LRNavigationTranstionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +51,12 @@
 		070AD9901F5BA3EE0055F524 /* LRAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LRAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		070AD9941F5BA3EE0055F524 /* LRAnimationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRAnimationUITests.m; sourceTree = "<group>"; };
 		070AD9961F5BA3EE0055F524 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		070AD9A81F5BB17A0055F524 /* LRViewControllerAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRViewControllerAnimationViewController.h; sourceTree = "<group>"; };
-		070AD9A91F5BB17A0055F524 /* LRViewControllerAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRViewControllerAnimationViewController.m; sourceTree = "<group>"; };
 		07BAEF9D1F5BC2C7009A0BEA /* LRViewAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRViewAnimationViewController.h; sourceTree = "<group>"; };
 		07BAEF9E1F5BC2C7009A0BEA /* LRViewAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRViewAnimationViewController.m; sourceTree = "<group>"; };
+		07BAEFA01F5C21E5009A0BEA /* LRPresentTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRPresentTransitionViewController.h; sourceTree = "<group>"; };
+		07BAEFA11F5C21E5009A0BEA /* LRPresentTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRPresentTransitionViewController.m; sourceTree = "<group>"; };
+		07BAEFA31F5C221A009A0BEA /* LRNavigationTranstionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRNavigationTranstionViewController.h; sourceTree = "<group>"; };
+		07BAEFA41F5C221A009A0BEA /* LRNavigationTranstionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRNavigationTranstionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +109,10 @@
 			children = (
 				07BAEF9D1F5BC2C7009A0BEA /* LRViewAnimationViewController.h */,
 				07BAEF9E1F5BC2C7009A0BEA /* LRViewAnimationViewController.m */,
-				070AD9A81F5BB17A0055F524 /* LRViewControllerAnimationViewController.h */,
-				070AD9A91F5BB17A0055F524 /* LRViewControllerAnimationViewController.m */,
+				07BAEFA01F5C21E5009A0BEA /* LRPresentTransitionViewController.h */,
+				07BAEFA11F5C21E5009A0BEA /* LRPresentTransitionViewController.m */,
+				07BAEFA31F5C221A009A0BEA /* LRNavigationTranstionViewController.h */,
+				07BAEFA41F5C221A009A0BEA /* LRNavigationTranstionViewController.m */,
 				070AD9721F5BA3EE0055F524 /* AppDelegate.h */,
 				070AD9731F5BA3EE0055F524 /* AppDelegate.m */,
 				070AD9781F5BA3EE0055F524 /* Main.storyboard */,
@@ -281,10 +286,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				070AD9AA1F5BB17A0055F524 /* LRViewControllerAnimationViewController.m in Sources */,
 				070AD9741F5BA3EE0055F524 /* AppDelegate.m in Sources */,
+				07BAEFA51F5C221A009A0BEA /* LRNavigationTranstionViewController.m in Sources */,
 				07BAEF9F1F5BC2C7009A0BEA /* LRViewAnimationViewController.m in Sources */,
 				070AD9711F5BA3EE0055F524 /* main.m in Sources */,
+				07BAEFA21F5C21E5009A0BEA /* LRPresentTransitionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

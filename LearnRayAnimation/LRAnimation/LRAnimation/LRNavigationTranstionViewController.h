@@ -1,5 +1,5 @@
 //
-//  LRViewControllerAnimationViewController.h
+//  LRNavigationTranstionViewController.h
 //  LRAnimation
 //
 //  Created by le zhou on 2017/9/3.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LRViewControllerAnimationViewController : UIViewController
+@interface LRNavigationTranstionViewController : UIViewController
 
 @end
