@@ -30,7 +30,7 @@
                                     <action selector="greenBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W6r-89-w8n"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fma-ln-2XA">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="View Animation" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fma-ln-2XA">
                                 <rect key="frame" x="27" y="392" width="321" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -88,6 +88,14 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="6" height="-1"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Layer Animation" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zqt-nQ-a1m">
+                                <rect key="frame" x="27" y="439" width="321" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -99,6 +107,7 @@
                         <outlet property="departingLabel" destination="sq9-vp-E0S" id="wec-3e-Wbl"/>
                         <outlet property="lraBtn" destination="9Qh-uW-p5R" id="KdY-j7-p7D"/>
                         <outlet property="lraTextField" destination="fma-ln-2XA" id="Oca-PE-5Ag"/>
+                        <outlet property="lraTextField2" destination="zqt-nQ-a1m" id="T73-E1-ojt"/>
                         <outlet property="springBtn" destination="Dmn-JH-ema" id="zg1-pu-G9o"/>
                     </connections>
                 </viewController>

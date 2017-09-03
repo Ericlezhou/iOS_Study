@@ -11,6 +11,7 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *lraBtn;
 @property (weak, nonatomic) IBOutlet UITextField *lraTextField;
+@property (weak, nonatomic) IBOutlet UITextField *lraTextField2;
 @property (weak, nonatomic) IBOutlet UILabel *cloud1;
 @property (weak, nonatomic) IBOutlet UILabel *cloud2;
 @property (weak, nonatomic) IBOutlet UILabel *cloud3;
@@ -32,31 +33,60 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    //normal animation
+    
+    //animation initialization
+    
+    //1.normal animation
     self.lraBtn.frame = [self makeRectBeforeAnimation:self.lraBtn.frame];
-    self.lraTextField.frame = [self makeRectBeforeAnimation:self.lraTextField.frame];
+    
+    //2.比较 view animation 和 layer animation ；
+    //view animation to the lraTextField:
+    self.lraTextField.frame =[self makeRectBeforeAnimation:self.lraTextField.frame];
+    //layer animation specify both the start and end values and do nothing to the lraTextField2 at first
+    self.lraTextField2.layer.position = CGPointMake(-self.view.bounds.size.width, self.lraTextField2.layer.position.y);
+    
+    //3.渐变效果
     self.cloud1.alpha = 0;
     self.cloud2.alpha = 0;
     self.cloud3.alpha = 0;
     self.cloud4.alpha = 0;
     
-    //spring animation
+    //4.spring animation
     CGRect oriSpringFrame = self.springBtn.frame;
     CGRect lowerFrame = CGRectMake(oriSpringFrame.origin.x, oriSpringFrame.origin.y + 30, oriSpringFrame.size.width, oriSpringFrame.size.height);
     self.springBtn.frame = lowerFrame;
     self.springBtn.alpha = 0;
+    
+    [self performSelector:@selector(delay) withObject:nil afterDelay:5];
 }
+
+- (void)delay{
+    NSLog(@"");
+}
+
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    //normal animation
+    //1、normal animation
     [UIView animateWithDuration:0.5 animations:^{
         self.lraBtn.frame = [self makeRectAfterAnimation:self.lraBtn.frame];
     }];
     
+    //2.
+    //view animation
     [UIView animateWithDuration:0.5 delay:0.3 options:UIViewAnimationOptionTransitionNone animations:^{
         self.lraTextField.frame = [self makeRectAfterAnimation:self.lraTextField.frame];
     } completion:nil];
+    //layer animation to lraTextField2
+    CABasicAnimation *basicAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
+    basicAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(CGRectGetMidX(self.lraTextField2.frame) - self.view.bounds.size.width, CGRectGetMidY(self.lraTextField2.frame))];
+    basicAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(CGRectGetMidX(self.lraTextField2.frame), CGRectGetMidY(self.lraTextField2.frame))];
+    basicAnimation.fillMode = kCAFillModeBoth;
+    basicAnimation.duration = 0.5;
+    basicAnimation.beginTime = CACurrentMediaTime() + 0.4;
+    [self.lraTextField2.layer addAnimation:basicAnimation forKey:nil];
     
+    
+    //3
     [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionTransitionNone animations:^{
         self.cloud1.alpha = 1;
     } completion:^(BOOL finished) {
@@ -96,7 +126,7 @@
             [self.cloud4 removeFromSuperview];
         }];
     }];
-    //spring animaiton
+    //4.spring animaiton
     [UIView animateWithDuration:0.5 delay:1 usingSpringWithDamping:0.2 initialSpringVelocity:1 options:UIViewAnimationOptionTransitionNone animations:^{
         CGRect oriSpringFrame = self.springBtn.frame;
         CGRect higherFrame = CGRectMake(oriSpringFrame.origin.x, oriSpringFrame.origin.y - 30, oriSpringFrame.size.width, oriSpringFrame.size.height);
