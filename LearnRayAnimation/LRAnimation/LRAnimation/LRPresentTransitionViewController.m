@@ -10,7 +10,7 @@
 #import "LRTargetPresentViewController.h"
 #import "LRPresentAnimator.h"
 
-@interface LRPresentTransitionViewController ()
+@interface LRPresentTransitionViewController ()<LRPresentAnimatorHelperProtocol>
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 
@@ -26,6 +26,7 @@
 
 - (void)imageClicked:(id)sender {
     LRTargetPresentViewController *viewCtl = [[LRTargetPresentViewController alloc] initWithNibName:nil bundle:nil];
+    viewCtl.imagName = @"IMG_0294.png";
     viewCtl.transitioningDelegate = self;
     [self presentViewController:viewCtl animated:YES completion:nil];
 }
@@ -38,13 +39,19 @@
 #pragma mark - UIViewControllerTransitioningDelegate
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
     LRPresentAnimator *animator = [[LRPresentAnimator alloc] init];
-    
+    animator.isPresenting = YES;
     return animator;
 }
 
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
     LRPresentAnimator *animator = [[LRPresentAnimator alloc] init];
-    
+    animator.isPresenting = NO;
     return animator;
 }
+
+#pragma mark - LRPresentAnimatorHelperProtocol
+- (CGRect)popOriginRectForLRPresentAnimator:(LRPresentAnimator *)presentAnimator {
+    return self.imageView.frame;
+}
+
 @end

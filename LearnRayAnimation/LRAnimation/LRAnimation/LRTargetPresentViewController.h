@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LRTargetPresentViewController : UIViewController
-
+@property (nonatomic, copy) NSString *imagName;
 @end

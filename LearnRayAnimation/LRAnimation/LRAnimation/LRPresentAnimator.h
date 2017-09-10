@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-@interface LRPresentAnimator : NSObject <UIViewControllerAnimatedTransitioning>
+@class LRPresentAnimator;
 
+@protocol LRPresentAnimatorHelperProtocol
+@optional
+- (CGRect)popOriginRectForLRPresentAnimator:(LRPresentAnimator *)presentAnimator;
+@end
+
+@interface LRPresentAnimator : NSObject <UIViewControllerAnimatedTransitioning>
+@property (nonatomic, assign) BOOL isPresenting;
 @end

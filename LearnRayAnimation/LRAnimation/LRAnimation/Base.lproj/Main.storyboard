@@ -71,7 +71,7 @@
         <!--ViewController Animation-->
         <scene sceneID="OIs-fo-ZNf">
             <objects>
-                <viewController title="ViewController Animation" id="my7-cW-jh4" customClass="LRViewControllerAnimationViewController" sceneMemberID="viewController">
+                <viewController title="ViewController Animation" id="my7-cW-jh4" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ClJ-Iu-Mhj"/>
                         <viewControllerLayoutGuide type="bottom" id="R5f-m1-MMY"/>
