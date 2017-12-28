@@ -1,0 +1,555 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		076E08A61FD53959001202C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E08A51FD53959001202C8 /* AppDelegate.m */; };
+		076E08A91FD53959001202C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E08A81FD53959001202C8 /* ViewController.m */; };
+		076E08AC1FD53959001202C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076E08AA1FD53959001202C8 /* Main.storyboard */; };
+		076E08AE1FD53959001202C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076E08AD1FD53959001202C8 /* Assets.xcassets */; };
+		076E08B11FD53959001202C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076E08AF1FD53959001202C8 /* LaunchScreen.storyboard */; };
+		076E08B41FD53959001202C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E08B31FD53959001202C8 /* main.m */; };
+		076E08BE1FD53959001202C8 /* GlassEffectViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E08BD1FD53959001202C8 /* GlassEffectViewTests.m */; };
+		076E08C91FD53959001202C8 /* GlassEffectViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 076E08C81FD53959001202C8 /* GlassEffectViewUITests.m */; };
+		076E08D71FD53A63001202C8 /* iPhone X.png in Resources */ = {isa = PBXBuildFile; fileRef = 076E08D61FD53A63001202C8 /* iPhone X.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		076E08BA1FD53959001202C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 076E08991FD53959001202C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 076E08A01FD53959001202C8;
+			remoteInfo = GlassEffectView;
+		};
+		076E08C51FD53959001202C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 076E08991FD53959001202C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 076E08A01FD53959001202C8;
+			remoteInfo = GlassEffectView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		076E08A11FD53959001202C8 /* GlassEffectView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlassEffectView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		076E08A41FD53959001202C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		076E08A51FD53959001202C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		076E08A71FD53959001202C8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		076E08A81FD53959001202C8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		076E08AB1FD53959001202C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		076E08AD1FD53959001202C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		076E08B01FD53959001202C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		076E08B21FD53959001202C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		076E08B31FD53959001202C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		076E08B91FD53959001202C8 /* GlassEffectViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlassEffectViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		076E08BD1FD53959001202C8 /* GlassEffectViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlassEffectViewTests.m; sourceTree = "<group>"; };
+		076E08BF1FD53959001202C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		076E08C41FD53959001202C8 /* GlassEffectViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlassEffectViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		076E08C81FD53959001202C8 /* GlassEffectViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlassEffectViewUITests.m; sourceTree = "<group>"; };
+		076E08CA1FD53959001202C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		076E08D61FD53A63001202C8 /* iPhone X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone X.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		076E089E1FD53959001202C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076E08B61FD53959001202C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076E08C11FD53959001202C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		076E08981FD53959001202C8 = {
+			isa = PBXGroup;
+			children = (
+				076E08A31FD53959001202C8 /* GlassEffectView */,
+				076E08BC1FD53959001202C8 /* GlassEffectViewTests */,
+				076E08C71FD53959001202C8 /* GlassEffectViewUITests */,
+				076E08A21FD53959001202C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		076E08A21FD53959001202C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				076E08A11FD53959001202C8 /* GlassEffectView.app */,
+				076E08B91FD53959001202C8 /* GlassEffectViewTests.xctest */,
+				076E08C41FD53959001202C8 /* GlassEffectViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		076E08A31FD53959001202C8 /* GlassEffectView */ = {
+			isa = PBXGroup;
+			children = (
+				076E08D61FD53A63001202C8 /* iPhone X.png */,
+				076E08A41FD53959001202C8 /* AppDelegate.h */,
+				076E08A51FD53959001202C8 /* AppDelegate.m */,
+				076E08A71FD53959001202C8 /* ViewController.h */,
+				076E08A81FD53959001202C8 /* ViewController.m */,
+				076E08AA1FD53959001202C8 /* Main.storyboard */,
+				076E08AD1FD53959001202C8 /* Assets.xcassets */,
+				076E08AF1FD53959001202C8 /* LaunchScreen.storyboard */,
+				076E08B21FD53959001202C8 /* Info.plist */,
+				076E08B31FD53959001202C8 /* main.m */,
+			);
+			path = GlassEffectView;
+			sourceTree = "<group>";
+		};
+		076E08BC1FD53959001202C8 /* GlassEffectViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				076E08BD1FD53959001202C8 /* GlassEffectViewTests.m */,
+				076E08BF1FD53959001202C8 /* Info.plist */,
+			);
+			path = GlassEffectViewTests;
+			sourceTree = "<group>";
+		};
+		076E08C71FD53959001202C8 /* GlassEffectViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				076E08C81FD53959001202C8 /* GlassEffectViewUITests.m */,
+				076E08CA1FD53959001202C8 /* Info.plist */,
+			);
+			path = GlassEffectViewUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		076E08A01FD53959001202C8 /* GlassEffectView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 076E08CD1FD53959001202C8 /* Build configuration list for PBXNativeTarget "GlassEffectView" */;
+			buildPhases = (
+				076E089D1FD53959001202C8 /* Sources */,
+				076E089E1FD53959001202C8 /* Frameworks */,
+				076E089F1FD53959001202C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GlassEffectView;
+			productName = GlassEffectView;
+			productReference = 076E08A11FD53959001202C8 /* GlassEffectView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		076E08B81FD53959001202C8 /* GlassEffectViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 076E08D01FD53959001202C8 /* Build configuration list for PBXNativeTarget "GlassEffectViewTests" */;
+			buildPhases = (
+				076E08B51FD53959001202C8 /* Sources */,
+				076E08B61FD53959001202C8 /* Frameworks */,
+				076E08B71FD53959001202C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				076E08BB1FD53959001202C8 /* PBXTargetDependency */,
+			);
+			name = GlassEffectViewTests;
+			productName = GlassEffectViewTests;
+			productReference = 076E08B91FD53959001202C8 /* GlassEffectViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		076E08C31FD53959001202C8 /* GlassEffectViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 076E08D31FD53959001202C8 /* Build configuration list for PBXNativeTarget "GlassEffectViewUITests" */;
+			buildPhases = (
+				076E08C01FD53959001202C8 /* Sources */,
+				076E08C11FD53959001202C8 /* Frameworks */,
+				076E08C21FD53959001202C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				076E08C61FD53959001202C8 /* PBXTargetDependency */,
+			);
+			name = GlassEffectViewUITests;
+			productName = GlassEffectViewUITests;
+			productReference = 076E08C41FD53959001202C8 /* GlassEffectViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		076E08991FD53959001202C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = nexus;
+				TargetAttributes = {
+					076E08A01FD53959001202C8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					076E08B81FD53959001202C8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 076E08A01FD53959001202C8;
+					};
+					076E08C31FD53959001202C8 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 076E08A01FD53959001202C8;
+					};
+				};
+			};
+			buildConfigurationList = 076E089C1FD53959001202C8 /* Build configuration list for PBXProject "GlassEffectView" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 076E08981FD53959001202C8;
+			productRefGroup = 076E08A21FD53959001202C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				076E08A01FD53959001202C8 /* GlassEffectView */,
+				076E08B81FD53959001202C8 /* GlassEffectViewTests */,
+				076E08C31FD53959001202C8 /* GlassEffectViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		076E089F1FD53959001202C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				076E08B11FD53959001202C8 /* LaunchScreen.storyboard in Resources */,
+				076E08AE1FD53959001202C8 /* Assets.xcassets in Resources */,
+				076E08D71FD53A63001202C8 /* iPhone X.png in Resources */,
+				076E08AC1FD53959001202C8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076E08B71FD53959001202C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076E08C21FD53959001202C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		076E089D1FD53959001202C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				076E08A91FD53959001202C8 /* ViewController.m in Sources */,
+				076E08B41FD53959001202C8 /* main.m in Sources */,
+				076E08A61FD53959001202C8 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076E08B51FD53959001202C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				076E08BE1FD53959001202C8 /* GlassEffectViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		076E08C01FD53959001202C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				076E08C91FD53959001202C8 /* GlassEffectViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		076E08BB1FD53959001202C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 076E08A01FD53959001202C8 /* GlassEffectView */;
+			targetProxy = 076E08BA1FD53959001202C8 /* PBXContainerItemProxy */;
+		};
+		076E08C61FD53959001202C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 076E08A01FD53959001202C8 /* GlassEffectView */;
+			targetProxy = 076E08C51FD53959001202C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		076E08AA1FD53959001202C8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				076E08AB1FD53959001202C8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		076E08AF1FD53959001202C8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				076E08B01FD53959001202C8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		076E08CB1FD53959001202C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		076E08CC1FD53959001202C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		076E08CE1FD53959001202C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GlassEffectView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lezhou.nexus.GlassEffectView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		076E08CF1FD53959001202C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GlassEffectView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lezhou.nexus.GlassEffectView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		076E08D11FD53959001202C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GlassEffectViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lezhou.nexus.GlassEffectViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlassEffectView.app/GlassEffectView";
+			};
+			name = Debug;
+		};
+		076E08D21FD53959001202C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GlassEffectViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lezhou.nexus.GlassEffectViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlassEffectView.app/GlassEffectView";
+			};
+			name = Release;
+		};
+		076E08D41FD53959001202C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GlassEffectViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lezhou.nexus.GlassEffectViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GlassEffectView;
+			};
+			name = Debug;
+		};
+		076E08D51FD53959001202C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GlassEffectViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lezhou.nexus.GlassEffectViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GlassEffectView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		076E089C1FD53959001202C8 /* Build configuration list for PBXProject "GlassEffectView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				076E08CB1FD53959001202C8 /* Debug */,
+				076E08CC1FD53959001202C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		076E08CD1FD53959001202C8 /* Build configuration list for PBXNativeTarget "GlassEffectView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				076E08CE1FD53959001202C8 /* Debug */,
+				076E08CF1FD53959001202C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		076E08D01FD53959001202C8 /* Build configuration list for PBXNativeTarget "GlassEffectViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				076E08D11FD53959001202C8 /* Debug */,
+				076E08D21FD53959001202C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		076E08D31FD53959001202C8 /* Build configuration list for PBXNativeTarget "GlassEffectViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				076E08D41FD53959001202C8 /* Debug */,
+				076E08D51FD53959001202C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 076E08991FD53959001202C8 /* Project object */;
+}
