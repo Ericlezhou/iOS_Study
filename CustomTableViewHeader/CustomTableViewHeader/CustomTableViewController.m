@@ -70,6 +70,10 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
 
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self adjustCustomTableViewHeaderWithScrollView:scrollView];
+}
+
+- (void)adjustCustomTableViewHeaderWithScrollView:(UIScrollView *)scrollView {
     NSLog(@"scrollView offset y : %f, inset : %f, contentSize y : %f", scrollView.contentOffset.y, scrollView.contentInset.top, scrollView.contentSize.height);
     ScrollDirection scrollDirection = ScrollDirectionNone;
     if (self.lastContentOffset > scrollView.contentOffset.y) {
@@ -79,19 +83,21 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
     }
     self.lastContentOffset = scrollView.contentOffset.y;
     NSLog(@"%@",scrollDirection == ScrollDirectionDown ? @"向下" : @"向上");
-
+    
     CGFloat top = scrollView.contentOffset.y + self.tableView.contentInset.top;
-    if (scrollDirection == ScrollDirectionUp) {
-         top += self.topFloatView.frame.size.height;
-    }else{
-        if (self.topFloatView.superview && [[self.topFloatView subviews] lastObject]) {
-            top += (self.topFloatView.frame.size.height - ((UIView *)[[self.topFloatView subviews] lastObject]).frame.size.height);
+    if (self.topFloatView.superview) {
+        if (scrollDirection == ScrollDirectionUp) {
+            top += self.topFloatView.frame.size.height;
+        } else if (scrollDirection == ScrollDirectionDown) {
+            if ([[self.topFloatView subviews] lastObject]) {
+                top += (self.topFloatView.frame.size.height - ((UIView *)[[self.topFloatView subviews] lastObject]).frame.size.height);
+            }
         }
     }
     
     NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:CGPointMake(0, top)];
     NSLog(@"indexPath row = %lu, section = %lu", indexPath.row, indexPath.section);
-
+    
     NSMutableArray *showedIndex = [NSMutableArray array];
     NSMutableArray *hidedIndex = [NSMutableArray array];
     for (NSIndexPath *inPath in [self indexPathsOfCustomHeaderViewInTableView:self.tableView]) {
@@ -115,7 +121,7 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
                 if (![[self.topFloatView subviews] containsObject:contentView]) {
                     [self.topFloatView addSubview:contentView];
                 }
-                [self refreshCustomHeaderView];
+                [self layoutCustomHeaderView];
             }
         }
     }
@@ -123,24 +129,22 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
         UIView *contentView = [self tableView:self.tableView customTableViewHeaderViewAtIndexPath:inPath];
         if (contentView) {
             if (scrollDirection == ScrollDirectionDown) {
+                //消失
                 if (self.topFloatView.superview && [[self.topFloatView subviews] containsObject:contentView]) {
                     [contentView removeFromSuperview];
-                    [self refreshCustomHeaderView];
                 }
+                [self layoutCustomHeaderView];
             }
         }
     }
 }
 
-- (void)refreshCustomHeaderView {
+- (void)layoutCustomHeaderView {
     NSArray *subviews = [self.topFloatView subviews];
     if (subviews.count) {
         if (!self.topFloatView.superview) {
-//            self.topFloatView.alpha = 0;
             [self.view addSubview:self.topFloatView];
-//            [UIView animateWithDuration:0.3 animations:^{
-                self.topFloatView.alpha = 1;
-//            }];
+            self.topFloatView.alpha = 1;
         }
         CGFloat sumHeight = 0;
         CGFloat maxWidth = 0;
@@ -152,18 +156,10 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
         
         self.topFloatView.frame = CGRectMake(self.tableView.frame.origin.x, self.tableView.frame.origin.y, maxWidth, sumHeight);
     }else{
-        static BOOL removingAnimation = NO;
-        if (self.topFloatView.superview && !removingAnimation) {
-//            self.topFloatView.alpha = 1;
-//            [UIView animateWithDuration:0.3 animations:^{
-//                removingAnimation = YES;
-//                self.topFloatView.alpha = 0;
-//            } completion:^(BOOL finished) {
-//                removingAnimation = NO;
-                [self.topFloatView removeFromSuperview];
-                [self.topFloatView removeAllSubviews];
-                self.topFloatView.frame = CGRectZero;
-//            }];
+        if (self.topFloatView.superview) {
+            [self.topFloatView removeFromSuperview];
+            [self.topFloatView removeAllSubviews];
+            self.topFloatView.frame = CGRectZero;
         }
     }
 }
