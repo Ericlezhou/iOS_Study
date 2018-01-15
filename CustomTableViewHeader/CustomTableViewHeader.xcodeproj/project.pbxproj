@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0722C434200CCE2B002E6EB6 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0722C433200CCE2B002E6EB6 /* CustomTableViewCell.m */; };
 		076546321FF5CE4300DE4715 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 076546311FF5CE4300DE4715 /* AppDelegate.m */; };
 		076546351FF5CE4300DE4715 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 076546341FF5CE4300DE4715 /* ViewController.m */; };
 		076546381FF5CE4300DE4715 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076546361FF5CE4300DE4715 /* Main.storyboard */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0722C432200CCE2B002E6EB6 /* CustomTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		0722C433200CCE2B002E6EB6 /* CustomTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		0765462D1FF5CE4300DE4715 /* CustomTableViewHeader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTableViewHeader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		076546301FF5CE4300DE4715 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		076546311FF5CE4300DE4715 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -121,6 +124,8 @@
 				076546341FF5CE4300DE4715 /* ViewController.m */,
 				076546621FF5CE7800DE4715 /* CustomTableViewController.h */,
 				076546631FF5CE7800DE4715 /* CustomTableViewController.m */,
+				0722C432200CCE2B002E6EB6 /* CustomTableViewCell.h */,
+				0722C433200CCE2B002E6EB6 /* CustomTableViewCell.m */,
 				0765466B1FF5E67200DE4715 /* CustomHeaderView.h */,
 				0765466C1FF5E67200DE4715 /* CustomHeaderView.m */,
 				076546361FF5CE4300DE4715 /* Main.storyboard */,
@@ -291,6 +296,7 @@
 				076546351FF5CE4300DE4715 /* ViewController.m in Sources */,
 				076546401FF5CE4300DE4715 /* main.m in Sources */,
 				076546671FF5D23600DE4715 /* Utils.m in Sources */,
+				0722C434200CCE2B002E6EB6 /* CustomTableViewCell.m in Sources */,
 				076546321FF5CE4300DE4715 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

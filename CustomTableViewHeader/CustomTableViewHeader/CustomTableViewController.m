@@ -10,6 +10,7 @@
 #import "Utils.h"
 #import "CustomHeaderView.h"
 #import "UIView+additions.h"
+#import "CustomTableViewCell.h"
 typedef NS_ENUM(NSInteger, ScrollDirection) {
     ScrollDirectionNone,
     ScrollDirectionUp,
@@ -20,6 +21,7 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
 @property (nonatomic, strong) UIView *topFloatView;
 @property (nonatomic, strong) UILabel *topBtn;
 @property (nonatomic, strong) UILabel *middleBtn;
+@property (nonatomic, strong) UILabel *bottomBtn;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, assign) CGFloat lastContentOffset;
 @end
@@ -36,13 +38,20 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
 }
 - (UILabel *)middleBtn {
     if (!_middleBtn) {
-        _middleBtn = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, [Utils getScreenWidth], 60)];
+        _middleBtn = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, [Utils getScreenWidth], 30)];
         _middleBtn.backgroundColor = [UIColor yellowColor];
         _middleBtn.textColor = [UIColor blackColor];
     }
     return _middleBtn;
 }
-
+- (UILabel *)bottomBtn {
+    if (!_bottomBtn) {
+        _bottomBtn = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, [Utils getScreenWidth], 80)];
+        _bottomBtn.backgroundColor = [UIColor blueColor];
+        _bottomBtn.textColor = [UIColor blackColor];
+    }
+    return _bottomBtn;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor grayColor];
@@ -86,49 +95,71 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
     
     CGFloat top = scrollView.contentOffset.y + self.tableView.contentInset.top;
     if (self.topFloatView.superview) {
-        if (scrollDirection == ScrollDirectionUp) {
-            top += self.topFloatView.frame.size.height;
-        } else if (scrollDirection == ScrollDirectionDown) {
-            if ([[self.topFloatView subviews] lastObject]) {
-                top += (self.topFloatView.frame.size.height - ((UIView *)[[self.topFloatView subviews] lastObject]).frame.size.height);
-            }
-        }
+        top += self.topFloatView.frame.size.height;
     }
-    
     NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:CGPointMake(0, top)];
     NSLog(@"indexPath row = %lu, section = %lu", indexPath.row, indexPath.section);
     
-    NSMutableArray *showedIndex = [NSMutableArray array];
-    NSMutableArray *hidedIndex = [NSMutableArray array];
-    for (NSIndexPath *inPath in [self indexPathsOfCustomHeaderViewInTableView:self.tableView]) {
-        if (inPath.section < indexPath.section) {
-            [showedIndex addObject:inPath];
-            continue;
-        }else if (inPath.section == indexPath.section) {
-            if (inPath.row <= indexPath.row) {
+    //区分滚动方向分别处理
+    if (scrollDirection == ScrollDirectionUp) {
+        
+        NSMutableArray *showedIndex = [NSMutableArray array];
+        for (NSIndexPath *inPath in [self indexPathsOfCustomHeaderViewInTableView:self.tableView]) {
+            if (inPath.section < indexPath.section) {
                 [showedIndex addObject:inPath];
                 continue;
+            }else if (inPath.section == indexPath.section) {
+                if (inPath.row < indexPath.row) {
+                    [showedIndex addObject:inPath];
+                    continue;
+                } else if (inPath.row == indexPath.row) {
+                    //------支持偏移量-开始-------
+                    UIView *sourceTableViewCell = [self.tableView cellForRowAtIndexPath:inPath];
+                    CGFloat appearOffset = 0;
+                    if (sourceTableViewCell && [sourceTableViewCell isKindOfClass:[CustomTableViewCell class]] && [sourceTableViewCell respondsToSelector:@selector(customTableViewHeaderAppearOffset)]) {
+                        CustomTableViewCell *cell = (CustomTableViewCell *)sourceTableViewCell;
+                        appearOffset = [cell customTableViewHeaderAppearOffset];
+                    }
+                    if (appearOffset > 0) {
+                        CGFloat sourceTableViewCellOriginY = [self.tableView rectForRowAtIndexPath:inPath].origin.y;
+                        CGFloat resultScrollY = appearOffset + sourceTableViewCellOriginY;
+                        if (resultScrollY < top) {
+                            [showedIndex addObject:inPath];
+                        }
+                    }else{
+                        [showedIndex addObject:inPath];
+                    }
+                    //------支持偏移量-结束-------
+                    continue;
+                }
             }
         }
-        [hidedIndex addObject:inPath];
-    }
-    
-    for (NSIndexPath *inPath in showedIndex) {
-        UIView *contentView = [self tableView:self.tableView customTableViewHeaderViewAtIndexPath:inPath];
-        if (contentView) {
-            if (scrollDirection == ScrollDirectionUp) {
-                //出现
+        for (NSIndexPath *inPath in showedIndex) {
+            UIView *contentView = [self tableView:self.tableView customTableViewHeaderViewAtIndexPath:inPath];
+            if (contentView) {
+                //添加并展示view
                 if (![[self.topFloatView subviews] containsObject:contentView]) {
                     [self.topFloatView addSubview:contentView];
                 }
                 [self layoutCustomHeaderView];
             }
         }
-    }
-    for (NSIndexPath *inPath in hidedIndex) {
-        UIView *contentView = [self tableView:self.tableView customTableViewHeaderViewAtIndexPath:inPath];
-        if (contentView) {
-            if (scrollDirection == ScrollDirectionDown) {
+    } else if(scrollDirection == ScrollDirectionDown) {
+        
+        NSMutableArray *hidedIndex = [NSMutableArray array];
+        for (NSIndexPath *inPath in [self indexPathsOfCustomHeaderViewInTableView:self.tableView]) {
+            if (inPath.section < indexPath.section) {
+                continue;
+            }else if (inPath.section == indexPath.section) {
+                if (inPath.row < indexPath.row) {
+                    continue;
+                }
+            }
+            [hidedIndex addObject:inPath];
+        }
+        for (NSIndexPath *inPath in hidedIndex) {
+            UIView *contentView = [self tableView:self.tableView customTableViewHeaderViewAtIndexPath:inPath];
+            if (contentView) {
                 //消失
                 if (self.topFloatView.superview && [[self.topFloatView subviews] containsObject:contentView]) {
                     [contentView removeFromSuperview];
@@ -189,7 +220,11 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
     if (indexPath.section == 0) {
         cellColor = [UIColor redColor];
     } else if (indexPath.section == 1) {
-        cellColor = [UIColor yellowColor];
+        if (indexPath.row == 4) {
+            cell = [[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CustomTableViewCell"];
+        }else{
+            cellColor = [UIColor yellowColor];
+        }
     } else if (indexPath.section == 2) {
         cellColor = [UIColor blueColor];
     }
@@ -215,6 +250,7 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
     NSMutableArray *array = [NSMutableArray array];
     [array addObject:[NSIndexPath indexPathForRow:4 inSection:0]];
     [array addObject:[NSIndexPath indexPathForRow:4 inSection:1]];
+    [array addObject:[NSIndexPath indexPathForRow:4 inSection:2]];
     return array;
 }
 
@@ -227,6 +263,11 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
     if (indexPath.row == 4 && indexPath.section == 1) {
         [self.middleBtn setText:[NSString stringWithFormat:@"    row = %lu, section = %lu", indexPath.row, indexPath.section]];
         return self.middleBtn;
+    }
+    
+    if (indexPath.row == 4 && indexPath.section == 2) {
+        [self.bottomBtn setText:[NSString stringWithFormat:@"    row = %lu, section = %lu", indexPath.row, indexPath.section]];
+        return self.bottomBtn;
     }
     return nil;
 }
