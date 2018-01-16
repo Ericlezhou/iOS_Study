@@ -63,7 +63,7 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
         [self.view addSubview:self.tableView];
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
-        self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        self.tableView.contentInset = UIEdgeInsetsMake(100, 0, 0, 0);
         self.topFloatView = [[UIView alloc] initWithFrame:CGRectZero];
         self.topFloatView.alpha = 0;
     }
@@ -117,7 +117,7 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
             if (inPath.section < indexPath.section) {
                 [showedIndex addObject:inPath];
                 continue;
-            }else if (inPath.section == indexPath.section) {
+            } else if (inPath.section == indexPath.section) {
                 if (inPath.row < indexPath.row) {
                     [showedIndex addObject:inPath];
                     continue;
@@ -152,16 +152,16 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
                 }
             }
         }
-    } else if(scrollDirection == ScrollDirectionDown) {
+    } else if (scrollDirection == ScrollDirectionDown) {
         
         NSMutableArray *hidedIndex = [NSMutableArray array];
         for (NSIndexPath *inPath in [self indexPathsOfCustomHeaderViewInTableView:self.tableView]) {
             if (inPath.section < indexPath.section) {
                 continue;
-            }else if (inPath.section == indexPath.section) {
+            } else if (inPath.section == indexPath.section) {
                 if (inPath.row < indexPath.row) {
                     continue;
-                }else if (inPath.row == indexPath.row) {
+                } else if (inPath.row == indexPath.row) {
                     //------支持偏移量-开始-------
                     UITableViewCell *sourceTableViewCell = [self.tableView cellForRowAtIndexPath:inPath];
                     CGFloat disAppearOffset = 0;
@@ -243,7 +243,7 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
     } else if (indexPath.section == 1) {
         if (indexPath.row == 4) {
             cell = [[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CustomTableViewCell"];
-        }else{
+        } else {
             cellColor = [UIColor yellowColor];
         }
     } else if (indexPath.section == 2) {
