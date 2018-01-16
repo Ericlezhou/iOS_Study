@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomTableViewHeaderCellDelayShowProtocol.h"
 
-@interface CustomTableViewCell : UITableViewCell
+@interface CustomTableViewCell : UITableViewCell <CustomTableViewHeaderCellDelayShowProtocol>
 @property (nonatomic, strong) UIView *upView;
 @property (nonatomic, strong) UIView *downView;
-- (CGFloat)customTableViewHeaderAppearOffset;
 @end

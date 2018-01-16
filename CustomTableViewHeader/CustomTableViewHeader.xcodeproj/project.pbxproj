@@ -18,7 +18,6 @@
 		076546551FF5CE4300DE4715 /* CustomTableViewHeaderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 076546541FF5CE4300DE4715 /* CustomTableViewHeaderUITests.m */; };
 		076546641FF5CE7800DE4715 /* CustomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 076546631FF5CE7800DE4715 /* CustomTableViewController.m */; };
 		076546671FF5D23600DE4715 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 076546661FF5D23600DE4715 /* Utils.m */; };
-		0765466D1FF5E67200DE4715 /* CustomHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0765466C1FF5E67200DE4715 /* CustomHeaderView.m */; };
 		076546A31FF5F2AA00DE4715 /* UIView+additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 076546A21FF5F2AA00DE4715 /* UIView+additions.m */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +41,7 @@
 /* Begin PBXFileReference section */
 		0722C432200CCE2B002E6EB6 /* CustomTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		0722C433200CCE2B002E6EB6 /* CustomTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		0722C435200D96C3002E6EB6 /* CustomTableViewHeaderCellDelayShowProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableViewHeaderCellDelayShowProtocol.h; sourceTree = "<group>"; };
 		0765462D1FF5CE4300DE4715 /* CustomTableViewHeader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTableViewHeader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		076546301FF5CE4300DE4715 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		076546311FF5CE4300DE4715 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,8 +62,6 @@
 		076546631FF5CE7800DE4715 /* CustomTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewController.m; sourceTree = "<group>"; };
 		076546651FF5D23600DE4715 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		076546661FF5D23600DE4715 /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
-		0765466B1FF5E67200DE4715 /* CustomHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomHeaderView.h; sourceTree = "<group>"; };
-		0765466C1FF5E67200DE4715 /* CustomHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomHeaderView.m; sourceTree = "<group>"; };
 		076546A11FF5F2AA00DE4715 /* UIView+additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+additions.h"; sourceTree = "<group>"; };
 		076546A21FF5F2AA00DE4715 /* UIView+additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+additions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,10 +122,9 @@
 				076546341FF5CE4300DE4715 /* ViewController.m */,
 				076546621FF5CE7800DE4715 /* CustomTableViewController.h */,
 				076546631FF5CE7800DE4715 /* CustomTableViewController.m */,
+				0722C435200D96C3002E6EB6 /* CustomTableViewHeaderCellDelayShowProtocol.h */,
 				0722C432200CCE2B002E6EB6 /* CustomTableViewCell.h */,
 				0722C433200CCE2B002E6EB6 /* CustomTableViewCell.m */,
-				0765466B1FF5E67200DE4715 /* CustomHeaderView.h */,
-				0765466C1FF5E67200DE4715 /* CustomHeaderView.m */,
 				076546361FF5CE4300DE4715 /* Main.storyboard */,
 				076546391FF5CE4300DE4715 /* Assets.xcassets */,
 				0765463B1FF5CE4300DE4715 /* LaunchScreen.storyboard */,
@@ -290,7 +287,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0765466D1FF5E67200DE4715 /* CustomHeaderView.m in Sources */,
 				076546641FF5CE7800DE4715 /* CustomTableViewController.m in Sources */,
 				076546A31FF5F2AA00DE4715 /* UIView+additions.m in Sources */,
 				076546351FF5CE4300DE4715 /* ViewController.m in Sources */,

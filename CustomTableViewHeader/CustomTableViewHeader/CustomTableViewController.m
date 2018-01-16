@@ -8,16 +8,17 @@
 
 #import "CustomTableViewController.h"
 #import "Utils.h"
-#import "CustomHeaderView.h"
 #import "UIView+additions.h"
 #import "CustomTableViewCell.h"
+#import "CustomTableViewHeaderCellDelayShowProtocol.h"
+
 typedef NS_ENUM(NSInteger, ScrollDirection) {
     ScrollDirectionNone,
     ScrollDirectionUp,
     ScrollDirectionDown,
 };
 
-@interface CustomTableViewController () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, CustomHeaderViewProtocol>
+@interface CustomTableViewController () <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 @property (nonatomic, strong) UIView *topFloatView;
 @property (nonatomic, strong) UILabel *topBtn;
 @property (nonatomic, strong) UILabel *middleBtn;
@@ -30,7 +31,7 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
 
 - (UILabel *)topBtn {
     if (!_topBtn) {
-        _topBtn = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, [Utils getScreenWidth], 40)];
+        _topBtn = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, [Utils getScreenWidth], 20)];
         _topBtn.backgroundColor = [UIColor redColor];
         _topBtn.textColor = [UIColor blackColor];
     }
@@ -62,6 +63,7 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
         [self.view addSubview:self.tableView];
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
+        self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
         self.topFloatView = [[UIView alloc] initWithFrame:CGRectZero];
         self.topFloatView.alpha = 0;
     }
@@ -84,6 +86,13 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
 
 - (void)adjustCustomTableViewHeaderWithScrollView:(UIScrollView *)scrollView {
     NSLog(@"scrollView offset y : %f, inset : %f, contentSize y : %f", scrollView.contentOffset.y, scrollView.contentInset.top, scrollView.contentSize.height);
+    
+    if (self.topFloatView.superview && scrollView.contentInset.top + scrollView.contentOffset.y <= 0) {
+        [self.topFloatView removeAllSubviews];
+        [self.topFloatView removeFromSuperview];
+        return;
+    }
+    
     ScrollDirection scrollDirection = ScrollDirectionNone;
     if (self.lastContentOffset > scrollView.contentOffset.y) {
         scrollDirection = ScrollDirectionDown;
@@ -91,7 +100,6 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
         scrollDirection = ScrollDirectionUp;
     }
     self.lastContentOffset = scrollView.contentOffset.y;
-    NSLog(@"%@",scrollDirection == ScrollDirectionDown ? @"向下" : @"向上");
     
     CGFloat top = scrollView.contentOffset.y + self.tableView.contentInset.top;
     if (self.topFloatView.superview) {
@@ -99,10 +107,11 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
     }
     NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:CGPointMake(0, top)];
     NSLog(@"indexPath row = %lu, section = %lu", indexPath.row, indexPath.section);
-    
+    if (!indexPath) {
+        return;
+    }
     //区分滚动方向分别处理
     if (scrollDirection == ScrollDirectionUp) {
-        
         NSMutableArray *showedIndex = [NSMutableArray array];
         for (NSIndexPath *inPath in [self indexPathsOfCustomHeaderViewInTableView:self.tableView]) {
             if (inPath.section < indexPath.section) {
@@ -114,19 +123,18 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
                     continue;
                 } else if (inPath.row == indexPath.row) {
                     //------支持偏移量-开始-------
-                    UIView *sourceTableViewCell = [self.tableView cellForRowAtIndexPath:inPath];
+                    UITableViewCell *sourceTableViewCell = [self.tableView cellForRowAtIndexPath:inPath];
                     CGFloat appearOffset = 0;
-                    if (sourceTableViewCell && [sourceTableViewCell isKindOfClass:[CustomTableViewCell class]] && [sourceTableViewCell respondsToSelector:@selector(customTableViewHeaderAppearOffset)]) {
-                        CustomTableViewCell *cell = (CustomTableViewCell *)sourceTableViewCell;
-                        appearOffset = [cell customTableViewHeaderAppearOffset];
+                    if (sourceTableViewCell && [sourceTableViewCell conformsToProtocol:@protocol(CustomTableViewHeaderCellDelayShowProtocol)]) {
+                        id<CustomTableViewHeaderCellDelayShowProtocol> delayShowCell = (id<CustomTableViewHeaderCellDelayShowProtocol>)sourceTableViewCell;
+                        appearOffset = [delayShowCell customTableViewHeaderDelayShowOffset];
                     }
-                    if (appearOffset > 0) {
-                        CGFloat sourceTableViewCellOriginY = [self.tableView rectForRowAtIndexPath:inPath].origin.y;
-                        CGFloat resultScrollY = appearOffset + sourceTableViewCellOriginY;
-                        if (resultScrollY < top) {
-                            [showedIndex addObject:inPath];
-                        }
-                    }else{
+                    
+                    CGFloat sourceTableViewCellOriginY = [self.tableView rectForRowAtIndexPath:inPath].origin.y;
+                    CGFloat resultScrollY = appearOffset + sourceTableViewCellOriginY;
+                    NSLog(@"ACT ScrollDirectionUp resultScrollY : %f ,top : %f", resultScrollY, top);
+                    if (resultScrollY < top) {
+                        NSLog(@"ACT ------ show add ------ ");
                         [showedIndex addObject:inPath];
                     }
                     //------支持偏移量-结束-------
@@ -140,8 +148,8 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
                 //添加并展示view
                 if (![[self.topFloatView subviews] containsObject:contentView]) {
                     [self.topFloatView addSubview:contentView];
+                    [self layoutCustomHeaderView];
                 }
-                [self layoutCustomHeaderView];
             }
         }
     } else if(scrollDirection == ScrollDirectionDown) {
@@ -153,9 +161,29 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
             }else if (inPath.section == indexPath.section) {
                 if (inPath.row < indexPath.row) {
                     continue;
+                }else if (inPath.row == indexPath.row) {
+                    //------支持偏移量-开始-------
+                    UITableViewCell *sourceTableViewCell = [self.tableView cellForRowAtIndexPath:inPath];
+                    CGFloat disAppearOffset = 0;
+                    if (sourceTableViewCell && [sourceTableViewCell conformsToProtocol:@protocol(CustomTableViewHeaderCellDelayShowProtocol)]) {
+                        id<CustomTableViewHeaderCellDelayShowProtocol> delayShowCell = (id<CustomTableViewHeaderCellDelayShowProtocol>)sourceTableViewCell;
+                        disAppearOffset = [delayShowCell customTableViewHeaderDelayHideOffset];
+                    }
+                    CGRect rect = [self.tableView rectForRowAtIndexPath:inPath];
+                    CGFloat sourceTableViewCellOriginY = rect.origin.y + rect.size.height;
+                    CGFloat resultScrollY = sourceTableViewCellOriginY - disAppearOffset;
+                    NSLog(@"ACT ScrollDirectionDown resultScrollY : %f ,top : %f", resultScrollY, top);
+                    if (resultScrollY > top) {
+                        NSLog(@"ACT ------ hide add ------ ");
+                        [hidedIndex addObject:inPath];
+                    }
+                    //------支持偏移量-结束-------
+                    continue;
+                } else {
+                    [hidedIndex addObject:inPath];
+                    continue;
                 }
             }
-            [hidedIndex addObject:inPath];
         }
         for (NSIndexPath *inPath in hidedIndex) {
             UIView *contentView = [self tableView:self.tableView customTableViewHeaderViewAtIndexPath:inPath];
@@ -163,8 +191,8 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
                 //消失
                 if (self.topFloatView.superview && [[self.topFloatView subviews] containsObject:contentView]) {
                     [contentView removeFromSuperview];
+                    [self layoutCustomHeaderView];
                 }
-                [self layoutCustomHeaderView];
             }
         }
     }
@@ -184,20 +212,14 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
             sumHeight += subview.frame.size.height;
             maxWidth = subview.frame.size.width > maxWidth ? subview.frame.size.width : maxWidth;
         }
-        
-        self.topFloatView.frame = CGRectMake(self.tableView.frame.origin.x, self.tableView.frame.origin.y, maxWidth, sumHeight);
-    }else{
+        self.topFloatView.frame = CGRectMake(self.tableView.frame.origin.x, self.tableView.frame.origin.y + self.tableView.contentInset.top, maxWidth, sumHeight);
+    } else {
         if (self.topFloatView.superview) {
-            [self.topFloatView removeFromSuperview];
-            [self.topFloatView removeAllSubviews];
+            self.topFloatView.alpha = 0;
             self.topFloatView.frame = CGRectZero;
+            [self.topFloatView removeFromSuperview];
         }
     }
-}
-
-#pragma mark - CustomTableViewProtocol
-- (void)didClickCustomHeaderView:(CustomHeaderView *)headerView {
-    
 }
 
 #pragma mark - Table view data source
@@ -207,9 +229,8 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return 12;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ssIdentifier"];
@@ -248,14 +269,14 @@ typedef NS_ENUM(NSInteger, ScrollDirection) {
 
 - (NSArray *)indexPathsOfCustomHeaderViewInTableView:(UITableView *)tableView {
     NSMutableArray *array = [NSMutableArray array];
-    [array addObject:[NSIndexPath indexPathForRow:4 inSection:0]];
+    [array addObject:[NSIndexPath indexPathForRow:0 inSection:0]];
     [array addObject:[NSIndexPath indexPathForRow:4 inSection:1]];
     [array addObject:[NSIndexPath indexPathForRow:4 inSection:2]];
     return array;
 }
 
 - (UIView *)tableView:(UITableView *)tableView customTableViewHeaderViewAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 4 && indexPath.section == 0) {
+    if (indexPath.row == 0 && indexPath.section == 0) {
         [self.topBtn setText:[NSString stringWithFormat:@"    row = %lu, section = %lu", indexPath.row, indexPath.section]];
         return self.topBtn;
     }

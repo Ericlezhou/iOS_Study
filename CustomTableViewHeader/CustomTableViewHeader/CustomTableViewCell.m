@@ -38,8 +38,11 @@
     // Configure the view for the selected state
 }
 
-- (CGFloat)customTableViewHeaderAppearOffset {
+- (CGFloat)customTableViewHeaderDelayShowOffset {
     return self.frame.size.height * 0.5;
 }
 
+- (CGFloat)customTableViewHeaderDelayHideOffset {
+    return self.frame.size.height * 0.5;
+}
 @end
