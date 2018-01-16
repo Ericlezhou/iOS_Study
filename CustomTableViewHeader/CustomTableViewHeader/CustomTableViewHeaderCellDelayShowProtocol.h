@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @protocol CustomTableViewHeaderCellDelayShowProtocol <NSObject>
-@required
+@optional
 - (CGFloat)customTableViewHeaderDelayShowOffset;
 - (CGFloat)customTableViewHeaderDelayHideOffset;
 @end

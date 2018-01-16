@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0722C434200CCE2B002E6EB6 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0722C433200CCE2B002E6EB6 /* CustomTableViewCell.m */; };
+		0722C4AE200DEB1A002E6EB6 /* CustomTableViewHeaderHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0722C4AD200DEB1A002E6EB6 /* CustomTableViewHeaderHelper.m */; };
 		076546321FF5CE4300DE4715 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 076546311FF5CE4300DE4715 /* AppDelegate.m */; };
 		076546351FF5CE4300DE4715 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 076546341FF5CE4300DE4715 /* ViewController.m */; };
 		076546381FF5CE4300DE4715 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 076546361FF5CE4300DE4715 /* Main.storyboard */; };
@@ -42,6 +43,8 @@
 		0722C432200CCE2B002E6EB6 /* CustomTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		0722C433200CCE2B002E6EB6 /* CustomTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		0722C435200D96C3002E6EB6 /* CustomTableViewHeaderCellDelayShowProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableViewHeaderCellDelayShowProtocol.h; sourceTree = "<group>"; };
+		0722C4AC200DEB1A002E6EB6 /* CustomTableViewHeaderHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableViewHeaderHelper.h; sourceTree = "<group>"; };
+		0722C4AD200DEB1A002E6EB6 /* CustomTableViewHeaderHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewHeaderHelper.m; sourceTree = "<group>"; };
 		0765462D1FF5CE4300DE4715 /* CustomTableViewHeader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTableViewHeader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		076546301FF5CE4300DE4715 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		076546311FF5CE4300DE4715 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -122,6 +125,8 @@
 				076546341FF5CE4300DE4715 /* ViewController.m */,
 				076546621FF5CE7800DE4715 /* CustomTableViewController.h */,
 				076546631FF5CE7800DE4715 /* CustomTableViewController.m */,
+				0722C4AC200DEB1A002E6EB6 /* CustomTableViewHeaderHelper.h */,
+				0722C4AD200DEB1A002E6EB6 /* CustomTableViewHeaderHelper.m */,
 				0722C435200D96C3002E6EB6 /* CustomTableViewHeaderCellDelayShowProtocol.h */,
 				0722C432200CCE2B002E6EB6 /* CustomTableViewCell.h */,
 				0722C433200CCE2B002E6EB6 /* CustomTableViewCell.m */,
@@ -294,6 +299,7 @@
 				076546671FF5D23600DE4715 /* Utils.m in Sources */,
 				0722C434200CCE2B002E6EB6 /* CustomTableViewCell.m in Sources */,
 				076546321FF5CE4300DE4715 /* AppDelegate.m in Sources */,
+				0722C4AE200DEB1A002E6EB6 /* CustomTableViewHeaderHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2TJ6N26634;
 				INFOPLIST_FILE = CustomTableViewHeader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lezhou.nexus.CustomTableViewHeader;
@@ -470,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2TJ6N26634;
 				INFOPLIST_FILE = CustomTableViewHeader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lezhou.nexus.CustomTableViewHeader;
