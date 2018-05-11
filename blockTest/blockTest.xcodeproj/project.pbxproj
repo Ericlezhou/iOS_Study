@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		071C31541C831D44003B1E6A /* BLKView.m in Sources */ = {isa = PBXBuildFile; fileRef = 071C31531C831D44003B1E6A /* BLKView.m */; };
+		079E1A932091EB440021AD40 /* RIButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E1A912091EB440021AD40 /* RIButtonItem.m */; };
+		079E1A942091EB440021AD40 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 079E1A922091EB440021AD40 /* UIAlertView+Blocks.m */; };
 		07A709FD1C81FD8C00993A58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A709FC1C81FD8C00993A58 /* main.m */; };
 		07A70A001C81FD8C00993A58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A709FF1C81FD8C00993A58 /* AppDelegate.m */; };
 		07A70A031C81FD8C00993A58 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07A70A021C81FD8C00993A58 /* ViewController.m */; };
@@ -18,6 +20,10 @@
 /* Begin PBXFileReference section */
 		071C31521C831D44003B1E6A /* BLKView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLKView.h; sourceTree = "<group>"; };
 		071C31531C831D44003B1E6A /* BLKView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLKView.m; sourceTree = "<group>"; };
+		079E1A8F2091EB440021AD40 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		079E1A902091EB440021AD40 /* RIButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIButtonItem.h; sourceTree = "<group>"; };
+		079E1A912091EB440021AD40 /* RIButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIButtonItem.m; sourceTree = "<group>"; };
+		079E1A922091EB440021AD40 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
 		07A709F81C81FD8C00993A58 /* blockTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blockTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A709FC1C81FD8C00993A58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		07A709FE1C81FD8C00993A58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -66,6 +72,10 @@
 				07A70A021C81FD8C00993A58 /* ViewController.m */,
 				07A70A121C8292A600993A58 /* BLKViewController.h */,
 				07A70A131C8292A600993A58 /* BLKViewController.m */,
+				079E1A902091EB440021AD40 /* RIButtonItem.h */,
+				079E1A912091EB440021AD40 /* RIButtonItem.m */,
+				079E1A8F2091EB440021AD40 /* UIAlertView+Blocks.h */,
+				079E1A922091EB440021AD40 /* UIAlertView+Blocks.m */,
 				071C31521C831D44003B1E6A /* BLKView.h */,
 				071C31531C831D44003B1E6A /* BLKView.m */,
 				07A70A071C81FD8D00993A58 /* Assets.xcassets */,
@@ -114,7 +124,8 @@
 				TargetAttributes = {
 					07A709F71C81FD8C00993A58 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 423SA8TQ4C;
+						DevelopmentTeam = NX42WR44YU;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -155,6 +166,8 @@
 				07A70A031C81FD8C00993A58 /* ViewController.m in Sources */,
 				07A70A001C81FD8C00993A58 /* AppDelegate.m in Sources */,
 				07A70A141C8292A600993A58 /* BLKViewController.m in Sources */,
+				079E1A932091EB440021AD40 /* RIButtonItem.m in Sources */,
+				079E1A942091EB440021AD40 /* UIAlertView+Blocks.m in Sources */,
 				07A709FD1C81FD8C00993A58 /* main.m in Sources */,
 				071C31541C831D44003B1E6A /* BLKView.m in Sources */,
 			);
@@ -248,10 +261,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = NX42WR44YU;
 				INFOPLIST_FILE = blockTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eric.blockTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3f2cbd26-37d5-497f-a15e-39033319edcd";
+				PROVISIONING_PROFILE_SPECIFIER = "Wildcard iOS Development";
 			};
 			name = Debug;
 		};
@@ -260,10 +277,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = blockTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eric.blockTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

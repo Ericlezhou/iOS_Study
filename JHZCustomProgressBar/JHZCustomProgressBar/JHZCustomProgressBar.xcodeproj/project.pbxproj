@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		071AB62220A57CD100F71272 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 071AB62120A57CD100F71272 /* AppDelegate.m */; };
+		071AB62520A57CD100F71272 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 071AB62420A57CD100F71272 /* ViewController.m */; };
+		071AB62820A57CD100F71272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071AB62620A57CD100F71272 /* Main.storyboard */; };
+		071AB62A20A57CD100F71272 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071AB62920A57CD100F71272 /* Assets.xcassets */; };
+		071AB62D20A57CD100F71272 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071AB62B20A57CD100F71272 /* LaunchScreen.storyboard */; };
+		071AB63020A57CD100F71272 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 071AB62F20A57CD100F71272 /* main.m */; };
+		071AB65420A57D2400F71272 /* JHZCustomProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 071AB65320A57D2400F71272 /* JHZCustomProgressBar.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		071AB63620A57CD100F71272 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 071AB61520A57CD000F71272 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 071AB61C20A57CD100F71272;
+			remoteInfo = JHZCustomProgressBar;
+		};
+		071AB64120A57CD100F71272 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 071AB61520A57CD000F71272 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 071AB61C20A57CD100F71272;
+			remoteInfo = JHZCustomProgressBar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		071AB61D20A57CD100F71272 /* JHZCustomProgressBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JHZCustomProgressBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		071AB62020A57CD100F71272 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		071AB62120A57CD100F71272 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		071AB62320A57CD100F71272 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		071AB62420A57CD100F71272 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		071AB62720A57CD100F71272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		071AB62920A57CD100F71272 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		071AB62C20A57CD100F71272 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		071AB62E20A57CD100F71272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		071AB62F20A57CD100F71272 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		071AB63520A57CD100F71272 /* JHZCustomProgressBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JHZCustomProgressBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		071AB63B20A57CD100F71272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		071AB64020A57CD100F71272 /* JHZCustomProgressBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JHZCustomProgressBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		071AB64620A57CD100F71272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		071AB65220A57D2400F71272 /* JHZCustomProgressBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHZCustomProgressBar.h; sourceTree = "<group>"; };
+		071AB65320A57D2400F71272 /* JHZCustomProgressBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHZCustomProgressBar.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		071AB61A20A57CD100F71272 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071AB63220A57CD100F71272 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071AB63D20A57CD100F71272 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		071AB61420A57CD000F71272 = {
+			isa = PBXGroup;
+			children = (
+				071AB61F20A57CD100F71272 /* JHZCustomProgressBar */,
+				071AB63820A57CD100F71272 /* JHZCustomProgressBarTests */,
+				071AB64320A57CD100F71272 /* JHZCustomProgressBarUITests */,
+				071AB61E20A57CD100F71272 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		071AB61E20A57CD100F71272 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				071AB61D20A57CD100F71272 /* JHZCustomProgressBar.app */,
+				071AB63520A57CD100F71272 /* JHZCustomProgressBarTests.xctest */,
+				071AB64020A57CD100F71272 /* JHZCustomProgressBarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		071AB61F20A57CD100F71272 /* JHZCustomProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				071AB62020A57CD100F71272 /* AppDelegate.h */,
+				071AB62120A57CD100F71272 /* AppDelegate.m */,
+				071AB62320A57CD100F71272 /* ViewController.h */,
+				071AB62420A57CD100F71272 /* ViewController.m */,
+				071AB65220A57D2400F71272 /* JHZCustomProgressBar.h */,
+				071AB65320A57D2400F71272 /* JHZCustomProgressBar.m */,
+				071AB62620A57CD100F71272 /* Main.storyboard */,
+				071AB62920A57CD100F71272 /* Assets.xcassets */,
+				071AB62B20A57CD100F71272 /* LaunchScreen.storyboard */,
+				071AB62E20A57CD100F71272 /* Info.plist */,
+				071AB62F20A57CD100F71272 /* main.m */,
+			);
+			path = JHZCustomProgressBar;
+			sourceTree = "<group>";
+		};
+		071AB63820A57CD100F71272 /* JHZCustomProgressBarTests */ = {
+			isa = PBXGroup;
+			children = (
+				071AB63B20A57CD100F71272 /* Info.plist */,
+			);
+			path = JHZCustomProgressBarTests;
+			sourceTree = "<group>";
+		};
+		071AB64320A57CD100F71272 /* JHZCustomProgressBarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				071AB64620A57CD100F71272 /* Info.plist */,
+			);
+			path = JHZCustomProgressBarUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		071AB61C20A57CD100F71272 /* JHZCustomProgressBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 071AB64920A57CD100F71272 /* Build configuration list for PBXNativeTarget "JHZCustomProgressBar" */;
+			buildPhases = (
+				071AB61920A57CD100F71272 /* Sources */,
+				071AB61A20A57CD100F71272 /* Frameworks */,
+				071AB61B20A57CD100F71272 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JHZCustomProgressBar;
+			productName = JHZCustomProgressBar;
+			productReference = 071AB61D20A57CD100F71272 /* JHZCustomProgressBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		071AB63420A57CD100F71272 /* JHZCustomProgressBarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 071AB64C20A57CD100F71272 /* Build configuration list for PBXNativeTarget "JHZCustomProgressBarTests" */;
+			buildPhases = (
+				071AB63120A57CD100F71272 /* Sources */,
+				071AB63220A57CD100F71272 /* Frameworks */,
+				071AB63320A57CD100F71272 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				071AB63720A57CD100F71272 /* PBXTargetDependency */,
+			);
+			name = JHZCustomProgressBarTests;
+			productName = JHZCustomProgressBarTests;
+			productReference = 071AB63520A57CD100F71272 /* JHZCustomProgressBarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		071AB63F20A57CD100F71272 /* JHZCustomProgressBarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 071AB64F20A57CD100F71272 /* Build configuration list for PBXNativeTarget "JHZCustomProgressBarUITests" */;
+			buildPhases = (
+				071AB63C20A57CD100F71272 /* Sources */,
+				071AB63D20A57CD100F71272 /* Frameworks */,
+				071AB63E20A57CD100F71272 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				071AB64220A57CD100F71272 /* PBXTargetDependency */,
+			);
+			name = JHZCustomProgressBarUITests;
+			productName = JHZCustomProgressBarUITests;
+			productReference = 071AB64020A57CD100F71272 /* JHZCustomProgressBarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		071AB61520A57CD000F71272 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = nexus;
+				TargetAttributes = {
+					071AB61C20A57CD100F71272 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Manual;
+					};
+					071AB63420A57CD100F71272 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 071AB61C20A57CD100F71272;
+					};
+					071AB63F20A57CD100F71272 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 071AB61C20A57CD100F71272;
+					};
+				};
+			};
+			buildConfigurationList = 071AB61820A57CD000F71272 /* Build configuration list for PBXProject "JHZCustomProgressBar" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 071AB61420A57CD000F71272;
+			productRefGroup = 071AB61E20A57CD100F71272 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				071AB61C20A57CD100F71272 /* JHZCustomProgressBar */,
+				071AB63420A57CD100F71272 /* JHZCustomProgressBarTests */,
+				071AB63F20A57CD100F71272 /* JHZCustomProgressBarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		071AB61B20A57CD100F71272 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071AB62D20A57CD100F71272 /* LaunchScreen.storyboard in Resources */,
+				071AB62A20A57CD100F71272 /* Assets.xcassets in Resources */,
+				071AB62820A57CD100F71272 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071AB63320A57CD100F71272 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071AB63E20A57CD100F71272 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		071AB61920A57CD100F71272 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071AB62520A57CD100F71272 /* ViewController.m in Sources */,
+				071AB63020A57CD100F71272 /* main.m in Sources */,
+				071AB65420A57D2400F71272 /* JHZCustomProgressBar.m in Sources */,
+				071AB62220A57CD100F71272 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071AB63120A57CD100F71272 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071AB63C20A57CD100F71272 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		071AB63720A57CD100F71272 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 071AB61C20A57CD100F71272 /* JHZCustomProgressBar */;
+			targetProxy = 071AB63620A57CD100F71272 /* PBXContainerItemProxy */;
+		};
+		071AB64220A57CD100F71272 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 071AB61C20A57CD100F71272 /* JHZCustomProgressBar */;
+			targetProxy = 071AB64120A57CD100F71272 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		071AB62620A57CD100F71272 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				071AB62720A57CD100F71272 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		071AB62B20A57CD100F71272 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				071AB62C20A57CD100F71272 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		071AB64720A57CD100F71272 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		071AB64820A57CD100F71272 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		071AB64A20A57CD100F71272 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = NX42WR44YU;
+				INFOPLIST_FILE = JHZCustomProgressBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lezhou.nexus.JHZCustomProgressBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3f2cbd26-37d5-497f-a15e-39033319edcd";
+				PROVISIONING_PROFILE_SPECIFIER = "Wildcard iOS Development";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		071AB64B20A57CD100F71272 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = JHZCustomProgressBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lezhou.nexus.JHZCustomProgressBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		071AB64D20A57CD100F71272 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = JHZCustomProgressBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lezhou.nexus.JHZCustomProgressBarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JHZCustomProgressBar.app/JHZCustomProgressBar";
+			};
+			name = Debug;
+		};
+		071AB64E20A57CD100F71272 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = JHZCustomProgressBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lezhou.nexus.JHZCustomProgressBarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JHZCustomProgressBar.app/JHZCustomProgressBar";
+			};
+			name = Release;
+		};
+		071AB65020A57CD100F71272 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = JHZCustomProgressBarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lezhou.nexus.JHZCustomProgressBarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JHZCustomProgressBar;
+			};
+			name = Debug;
+		};
+		071AB65120A57CD100F71272 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = JHZCustomProgressBarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lezhou.nexus.JHZCustomProgressBarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JHZCustomProgressBar;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		071AB61820A57CD000F71272 /* Build configuration list for PBXProject "JHZCustomProgressBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				071AB64720A57CD100F71272 /* Debug */,
+				071AB64820A57CD100F71272 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		071AB64920A57CD100F71272 /* Build configuration list for PBXNativeTarget "JHZCustomProgressBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				071AB64A20A57CD100F71272 /* Debug */,
+				071AB64B20A57CD100F71272 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		071AB64C20A57CD100F71272 /* Build configuration list for PBXNativeTarget "JHZCustomProgressBarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				071AB64D20A57CD100F71272 /* Debug */,
+				071AB64E20A57CD100F71272 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		071AB64F20A57CD100F71272 /* Build configuration list for PBXNativeTarget "JHZCustomProgressBarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				071AB65020A57CD100F71272 /* Debug */,
+				071AB65120A57CD100F71272 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 071AB61520A57CD000F71272 /* Project object */;
+}
