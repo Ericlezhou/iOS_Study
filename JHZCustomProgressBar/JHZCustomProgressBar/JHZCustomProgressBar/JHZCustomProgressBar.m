@@ -55,9 +55,30 @@
     return arr;
 }
 
+- (NSArray<JHZCustomProgressBarClipItem *> *)arrayOfClipItems {
+    NSMutableArray<JHZCustomProgressBarClipItem *> *clipItems = [NSMutableArray array];
+    JHZCustomProgressBarClipItem *lastClipedItem = [[self arrayOfFinishedClipItems] lastObject];
+    if (lastClipedItem) {
+        if (self.progress > lastClipedItem.endProgress) {
+            JHZCustomProgressBarClipItem *processItem = [JHZCustomProgressBarClipItem new];
+            processItem.clipStatus = JHZCustomProgressBarClipStatus_Processing;
+            processItem.startProgress = lastClipedItem.endProgress;
+            processItem.activeProgress = self.progress;
+            [clipItems addObjectsFromArray:[self arrayOfFinishedClipItems]];
+            [clipItems addObject:processItem];
+        }
+    }else{
+        JHZCustomProgressBarClipItem *processItem = [JHZCustomProgressBarClipItem new];
+        processItem.clipStatus = JHZCustomProgressBarClipStatus_Processing;
+        processItem.startProgress = 0;
+        processItem.activeProgress = self.progress;
+        [clipItems addObject:processItem];
+    }
+    return clipItems;
+}
+
 - (void)layoutSubviews {
     [super layoutSubviews];
-    
 }
 
 

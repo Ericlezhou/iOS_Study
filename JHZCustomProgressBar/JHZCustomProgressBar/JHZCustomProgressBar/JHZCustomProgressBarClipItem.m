@@ -11,7 +11,6 @@
 @implementation JHZCustomProgressBarClipItem
 - (instancetype)init {
     if (self = [super init]) {
-        _clipProgress = 0;
         _clipStatus = JHZCustomProgressBarClipStatus_Finish;
         _clipProgressTintColor = [UIColor greenColor];
         _clipTrackTintColor = [UIColor grayColor];

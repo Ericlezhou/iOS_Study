@@ -16,6 +16,7 @@ typedef NS_ENUM(NSUInteger, JHZCustomProgressBarClipStatus) {
 @interface JHZCustomProgressBarClipItem : NSObject
 @property(nonatomic, assign) JHZCustomProgressBarClipStatus clipStatus;
 @property (nonatomic, assign) float startProgress;
+@property (nonatomic, assign) float activeProgress;
 @property (nonatomic, assign) float endProgress;
 @property(nonatomic, strong, nullable) UIColor* clipProgressTintColor;
 @property(nonatomic, strong, nullable) UIColor* clipTrackTintColor;
