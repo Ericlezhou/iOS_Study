@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0702F3F420A843D300E07756 /* SimpleCustomProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0702F3F320A843D300E07756 /* SimpleCustomProgressBar.m */; };
+		0702F3F720A85F5800E07756 /* JHZCustomProgressBarClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0702F3F620A85F5800E07756 /* JHZCustomProgressBarClipView.m */; };
+		0702F3FA20A864C800E07756 /* JHZCustomProgressBarClipItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0702F3F920A864C800E07756 /* JHZCustomProgressBarClipItem.m */; };
 		071AB62220A57CD100F71272 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 071AB62120A57CD100F71272 /* AppDelegate.m */; };
 		071AB62520A57CD100F71272 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 071AB62420A57CD100F71272 /* ViewController.m */; };
 		071AB62820A57CD100F71272 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071AB62620A57CD100F71272 /* Main.storyboard */; };
@@ -34,6 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0702F3F220A843D300E07756 /* SimpleCustomProgressBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleCustomProgressBar.h; sourceTree = "<group>"; };
+		0702F3F320A843D300E07756 /* SimpleCustomProgressBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleCustomProgressBar.m; sourceTree = "<group>"; };
+		0702F3F520A85F5800E07756 /* JHZCustomProgressBarClipView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHZCustomProgressBarClipView.h; sourceTree = "<group>"; };
+		0702F3F620A85F5800E07756 /* JHZCustomProgressBarClipView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHZCustomProgressBarClipView.m; sourceTree = "<group>"; };
+		0702F3F820A864C800E07756 /* JHZCustomProgressBarClipItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHZCustomProgressBarClipItem.h; sourceTree = "<group>"; };
+		0702F3F920A864C800E07756 /* JHZCustomProgressBarClipItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHZCustomProgressBarClipItem.m; sourceTree = "<group>"; };
 		071AB61D20A57CD100F71272 /* JHZCustomProgressBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JHZCustomProgressBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		071AB62020A57CD100F71272 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		071AB62120A57CD100F71272 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -104,8 +113,14 @@
 				071AB62120A57CD100F71272 /* AppDelegate.m */,
 				071AB62320A57CD100F71272 /* ViewController.h */,
 				071AB62420A57CD100F71272 /* ViewController.m */,
+				0702F3F220A843D300E07756 /* SimpleCustomProgressBar.h */,
+				0702F3F320A843D300E07756 /* SimpleCustomProgressBar.m */,
 				071AB65220A57D2400F71272 /* JHZCustomProgressBar.h */,
 				071AB65320A57D2400F71272 /* JHZCustomProgressBar.m */,
+				0702F3F520A85F5800E07756 /* JHZCustomProgressBarClipView.h */,
+				0702F3F620A85F5800E07756 /* JHZCustomProgressBarClipView.m */,
+				0702F3F820A864C800E07756 /* JHZCustomProgressBarClipItem.h */,
+				0702F3F920A864C800E07756 /* JHZCustomProgressBarClipItem.m */,
 				071AB62620A57CD100F71272 /* Main.storyboard */,
 				071AB62920A57CD100F71272 /* Assets.xcassets */,
 				071AB62B20A57CD100F71272 /* LaunchScreen.storyboard */,
@@ -264,9 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0702F3F420A843D300E07756 /* SimpleCustomProgressBar.m in Sources */,
 				071AB62520A57CD100F71272 /* ViewController.m in Sources */,
 				071AB63020A57CD100F71272 /* main.m in Sources */,
+				0702F3F720A85F5800E07756 /* JHZCustomProgressBarClipView.m in Sources */,
 				071AB65420A57D2400F71272 /* JHZCustomProgressBar.m in Sources */,
+				0702F3FA20A864C800E07756 /* JHZCustomProgressBarClipItem.m in Sources */,
 				071AB62220A57CD100F71272 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
