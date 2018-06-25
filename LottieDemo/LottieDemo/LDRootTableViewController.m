@@ -22,6 +22,7 @@
     dispatch_once(&onceToken, ^{
         _titles = @[@"9squares-AlBoardman",
                     @"HamburgerArrow",
+                    @"520",
                     @"IconTransitions",
                     @"LottieLogo1_masked",
                     @"LottieLogo1",
@@ -32,7 +33,9 @@
                     @"vcTransition1",
                     @"vcTransition2",
                     @"Watermelon",
-                    @"data"];
+                    @"data",
+                    @"JHZRecordLottieAnimation",
+                    @"btn_flash"];
     });
     return _titles;
 }

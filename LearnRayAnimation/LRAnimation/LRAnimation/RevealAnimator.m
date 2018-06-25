@@ -8,10 +8,6 @@
 
 #import "RevealAnimator.h"
 @interface RevealAnimator ()
-{
-    CGFloat _animationDuration;
-    UINavigationControllerOperation _operation;
-}
 @end
 
 @implementation RevealAnimator
@@ -23,8 +19,6 @@
     }
     return self;
 }
-
-
 
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext {
     return _animationDuration;

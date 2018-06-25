@@ -26,6 +26,9 @@
     self.lottieLogo.contentMode = UIViewContentModeScaleAspectFit;
     self.lottieLogo.frame = self.view.bounds;
     [self.lottieLogo setLoopAnimation:YES];
+//    self.lottieLogo.layer.contentsGravity  = kCAGravityResize;
+//    self.lottieLogo.layer.contentsCenter = CGRectMake(0.49, 0, 0.05, 1);
+    
     [self.view addSubview:self.lottieLogo];
     [self.view bringSubviewToFront:self.playBtn];
     [self.view bringSubviewToFront:self.pauseBtn];

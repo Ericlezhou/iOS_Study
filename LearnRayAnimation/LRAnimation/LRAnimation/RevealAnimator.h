@@ -10,5 +10,6 @@
 #import <UIKit/UIKit.h>
 
 @interface RevealAnimator : NSObject <UIViewControllerAnimatedTransitioning>
-
+@property (nonatomic, assign) CGFloat animationDuration;
+@property (nonatomic, assign) UINavigationControllerOperation operation;
 @end

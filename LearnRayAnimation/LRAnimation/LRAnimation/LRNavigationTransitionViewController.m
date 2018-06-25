@@ -7,16 +7,29 @@
 //
 
 #import "LRNavigationTransitionViewController.h"
+#import "LRTargetNavigationTransitionViewController.h"
+#import "RevealAnimator.h"
 
-@interface LRNavigationTransitionViewController ()
-
+@interface LRNavigationTransitionViewController () <UINavigationControllerDelegate>
+@property (nonatomic, strong) RevealAnimator *transition;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @end
 
 @implementation LRNavigationTransitionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.transition = [RevealAnimator new];
+    _imageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapG = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClicked:)];
+    [_imageView addGestureRecognizer:tapG];
+    self.navigationController.delegate = self;
+}
+
+- (void)imageClicked:(id)sender {
+    LRTargetNavigationTransitionViewController *viewCtl = [[LRTargetNavigationTransitionViewController alloc] initWithNibName:nil bundle:nil];
+    viewCtl.imagName = @"IMG_0294.png";
+    [self.navigationController pushViewController:viewCtl animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +37,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                            animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                         fromViewController:(UIViewController *)fromVC
+                                                           toViewController:(UIViewController *)toVC {
+    _transition.operation = operation;
+    return _transition;
 }
-*/
 
 @end
