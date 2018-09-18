@@ -34,6 +34,84 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //test 1   !!!! bad example
+    /*
+    dispatch_sync(_backgroundQueue, ^{
+        NSLog(@"test 1.0 %@", [NSThread isMainThread] ? @"main thread" : @"not main thread");
+        if ([NSThread isMainThread]) {
+            dispatch_sync(_backgroundQueue, ^{
+                NSLog(@"test 1.1 %@", [NSThread isMainThread] ? @"main thread" : @"not main thread");
+            });
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSLog(@"test 1.2 %@", [NSThread isMainThread] ? @"main thread" : @"not main thread");
+            });
+        }
+    });
+     */
+    
+    //test 2
+    
+//    dispatch_sync(dispatch_get_main_queue(), ^{
+//        NSLog(@"test 2.0 %@", [NSThread isMainThread] ? @"main thread" : @"not main thread");
+//        if ([NSThread isMainThread]) {
+//            dispatch_sync(_backgroundQueue, ^{
+//                NSLog(@"test 2.1 %@", [NSThread isMainThread] ? @"main thread" : @"not main thread");
+//            });
+//        } else {
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                NSLog(@"test 2.2 %@", [NSThread isMainThread] ? @"main thread" : @"not main thread");
+//            });
+//        }
+//    });
+    
+    
+    //test 3  common example
+//    dispatch_async(_backgroundQueue, ^{
+//        if ([NSThread isMainThread]) {
+//            dispatch_sync(_backgroundQueue, ^{
+//                NSLog(@"test 3.1 %@", [NSThread isMainThread] ? @"main thread" : @"not main thread");
+//            });
+//        } else {
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                NSLog(@"test3.2 %@", [NSThread isMainThread] ? @"main thread" : @"not main thread");
+//            });
+//        }
+//    });
+    
+    
+    
+    //test 4  dispatch_queue_set_specific && dispatch_get_specific
+//    static void *queueKey1 = "queueKey1";
+//    dispatch_queue_set_specific(dispatch_get_main_queue(), queueKey1, &queueKey1, NULL);
+//    dispatch_sync(_backgroundQueue, ^{
+//        void *flag = dispatch_get_specific(queueKey1);
+//        if (flag) {
+//            dispatch_sync(_backgroundQueue, ^{
+//                NSLog(@"test 4.1 %@", [NSThread isMainThread] ? @"main thread" : @"not main thread");
+//            });
+//        } else {
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                NSLog(@"test 4.2 %@", [NSThread isMainThread] ? @"main thread" : @"not main thread");
+//            });
+//        }
+//    });
+    
+    //test 5  dispatch_queue_get_label
+    dispatch_sync(_backgroundQueue, ^{
+        if (strcmp(dispatch_queue_get_label(DISPATCH_CURRENT_QUEUE_LABEL), dispatch_queue_get_label(dispatch_get_main_queue())) == 0) {
+            dispatch_sync(_backgroundQueue, ^{
+                NSLog(@"test 5.1 %@", [NSThread isMainThread] ? @"main thread" : @"not main thread");
+            });
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSLog(@"test 5.2 %@", [NSThread isMainThread] ? @"main thread" : @"not main thread");
+            });
+        }
+    });
+    
+    
+    /*
     for (int i = 0; i < 20; i++) {
         if (i % 3 == 0) {
             dispatch_async(_backgroundQueue, ^{
@@ -56,6 +134,7 @@
         }
         
     }
+     */
 }
 
 
